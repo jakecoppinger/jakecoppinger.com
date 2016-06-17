@@ -4,3 +4,4 @@ node_modules/
 .tmp/
 
 source/css/
+source/index.html
