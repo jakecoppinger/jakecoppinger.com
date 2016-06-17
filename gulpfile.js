@@ -11,10 +11,32 @@ var size = require('gulp-size');
 var cleanCSS = require('gulp-clean-css');
 var changed = require('gulp-changed');
 var autoprefixer = require('gulp-autoprefixer');
+var gulpFileInclude = require('gulp-file-include');
+var rename = require('gulp-rename');
+
+var reload = browserSync.reload;
 
 var source = "source/"
 var build = "dist/"
 var scssSource = source + "scss/**/*.scss"
+var templates = source + "templates";
+
+
+// TEMPLATES ///////////////////////
+
+// fileinclude: grab partials from templates and render out html files
+// ==========================================
+gulp.task('fileinclude', function() {
+    return gulp.src(source + '**/*.tpl.html')
+        .pipe(fileinclude())
+        .pipe(rename({
+            extname: ""
+        }))
+        .pipe(rename({
+            extname: ".html"
+        }))
+        .pipe(gulp.dest(source))
+});
 
 gulp.task('injectsass', function() {
     return gulp.src(scssSource)
@@ -24,7 +46,6 @@ gulp.task('injectsass', function() {
             stream: true
         }))
 });
-
 
 gulp.task('browserSync', function() {
     browserSync.init({
@@ -37,18 +58,20 @@ gulp.task('browserSync', function() {
     })
 })
 
-gulp.task('serve', ['browserSync', 'injectsass'], function() {
+gulp.task('serve', ['fileinclude', 'browserSync', 'injectsass'], function() {
     gulp.watch(scssSource, ['injectsass']);
+    gulp.watch(source + '**/*.tpl.html', ['fileinclude', reload]);
 });
 
-// BUILDS//////////////////////////
+// BUILDS //////////////////////////
 
 gulp.task('styles', function() {
 
     return gulp.src(scssSource)
         .pipe(changed(scssSource, {
-            extension: '.css'
-        }))
+            extension: '.scss'
+      
+ }))
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('.tmp/scss'))
         .pipe(autoprefixer({
@@ -69,12 +92,15 @@ gulp.task('styles', function() {
 
 gulp.task('copy', function() {
     var app = gulp.src([
-        source + '/*',
+        source + '**/*.html',
+        '!' + source + '**/*.tpl.html'
+        // We don't want to copy templates
     ], {
         dot: true
     }).pipe(gulp.dest(build));
 
-    return merge(app) // , adfadf, sfadf
+
+    return merge(app) // , thing1, thing2
         .pipe(size({
             title: 'copy'
         }));
@@ -84,6 +110,6 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('build', ['clean'], function(cb) {
     runSequence(
-        ['copy', 'styles'],
+        ['fileinclude', 'copy', 'styles'],
         cb);
 });
