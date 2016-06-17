@@ -40,7 +40,14 @@ gulp.task('fileinclude', function() {
 
 gulp.task('injectsass', function() {
     return gulp.src(scssSource)
-        .pipe(sass()) // Using gulp-sass
+        .pipe(sass().on('error', sass.logError))
+
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+
+
         .pipe(gulp.dest(source + "css"))
         .pipe(browserSync.reload({
             stream: true
@@ -66,7 +73,6 @@ gulp.task('serve', ['fileinclude', 'browserSync', 'injectsass'], function() {
 // BUILDS //////////////////////////
 
 gulp.task('styles', function() {
-
     return gulp.src(scssSource)
         .pipe(changed(scssSource, {
             extension: '.scss'

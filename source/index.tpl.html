@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
-
-@@include('templates/_imports.html')
-
+    <meta charset="UTF-8">
+    <title>Jake Coppinger</title>
+    <meta name="description" content="The portfolio of Jake Coppinger, a first year computer science student with a passion for code, mechatronics, film, and design." /> @@include('templates/_imports.html')
 </head>
 
 <body>
-Content of the document......
+    <div id="landingscreen">
+        <div id="maintitle">
+            <h1>Jake Coppinger.</h1>
+            <h2><a href="projects" data-transition="pop">Projects</a> / <a href="film" data-transition="pop">Film</a> / <a href="media_appearances" data-transition="pop">Media Appearances</a> / <a class="contact_page_open" href="#" data-ajax="false">Contact</a></h2>
+            <h3>The portfolio of Jake Coppinger, a first year computer science student with a passion for code, science, mechatronics, film, and design.</h3>
+            <ul id="menu" class="hidden">
+                <li id="mainmenu">
+                    <a href="/" data-transition="pop">Main Menu</a>
+                </li>
+                <li><a href="project/swirlesque" data-transition="pop">Swirlesque</a>
+                </li>
+                <li><a href="film" data-transition="pop">Film</a>
+                </li>
+                <li><a href="projects" data-transition="pop">Projects</a>
+                </li>
+                <li><a href="media_appearances" data-transition="pop">Media Appearances</a>
+                </li>
+                <li><a class="contact_page_open" href="#" data-ajax="false">Contact</a>
+                </li>
+            </ul>
+            <span class="social">
+
+        <a href="https://github.com/jakecoppinger/" target=”_blank” data-ajax="false">Q</a>
+        <a href="https://www.youtube.com/c/jakecoppinger" target=”_blank” data-ajax="false">r</a>
+        <a href="https://twitter.com/jakecoppinger" target=”_blank” data-ajax="false">a</a>
+        <a href="http://au.linkedin.com/in/jakecoppinger" target=”_blank” data-ajax="false">j</a>
+
+        </span>
+        </div>
+    </div>
 </body>
 
 </html>
