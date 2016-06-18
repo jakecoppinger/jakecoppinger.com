@@ -67,7 +67,8 @@ gulp.task('browserSync', function() {
 
 gulp.task('serve', ['fileinclude', 'browserSync', 'injectsass'], function() {
     gulp.watch(scssSource, ['injectsass']);
-    gulp.watch(source + '**/*.tpl.html', ['fileinclude', reload]);
+    gulp.watch(source + '**/*.html', ['fileinclude', reload]);
+    gulp.watch(source + 'js/*.js', [reload]);
 });
 
 // BUILDS //////////////////////////

@@ -1,5 +1,30 @@
 body {
-    background: #FFFFFF;
+    //background: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+div#backgroundimage {
+    z-index: -100;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* Location of the image */
+    background-image: url(https://placehold.it/1024x768);
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+    background-attachment: fixed;
+    /* This is what makes the background image rescale based
+     on the container's size */
+    background-size: cover;
+    /* Set a background color that will be displayed
+     while the background image is loading */
+    background-color: #FF4545;
+    display: none;
 }
 
 #landingscreen {
@@ -14,10 +39,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     transform: translateY(-50%);
-    font-family: HelveticaNeue;
+    font-family: akzidenz-grotesk_pro_regular;
     //font-weight: 300;
+    color: #7F7F7F;
     h1 {
-        color: black;
+        color: #000000;
         font-size: calc(1.5em + (5vw * 0.5));
     }
     h2 {

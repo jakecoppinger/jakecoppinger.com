@@ -1,0 +1,14 @@
+{
+  "name": "jakecoppinger.com",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Jake Coppinger <jake@jakecoppinger.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jakecoppinger/jakecoppinger.com",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}
