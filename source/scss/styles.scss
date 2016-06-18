@@ -4,38 +4,18 @@ h1 {
     margin: 0;
     padding: 0;
 }
-@media (min-width: 769px) {
-    div#backgroundimage {
-        background: url('https://placehold.it/1920x1080');
-    }
-}
 
-@media (max-width: 768px) {
-    div#backgroundimage {
-        background: url('https://placehold.it/1024x768');
-    }
-}
+@@include('_background_image.scss', {
+    "image":"departing",
+    "size": 10,
+    "url": "/images/departing.jpg"
+})
 
-div#backgroundimage {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-
-    background-position: center center;
-    // /* Background image doesn't tile */
-    // background-repeat: no-repeat;
-    // /* Background image is fixed in the viewport so that it doesn't move when 
-    //  the content's height is greater than the image's height */
-    // background-attachment: fixed;
-    // /* This is what makes the background image rescale based
-    //  on the container's size */
-    // background-size: cover;
-
-    background-color: #FF4545; // Debug
-    //    display: none;
-}
-
-
+@@include('_background_image.scss', {
+    "image":"robot",
+    "size": 10,
+    "url": "/images/robot.jpg"
+})
 
 #landingscreen {
     height: 100vh;

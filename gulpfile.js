@@ -40,6 +40,9 @@ gulp.task('fileinclude', function() {
 
 gulp.task('injectsass', function() {
     return gulp.src(scssSource)
+        .pipe(fileinclude({
+            basepath: source + 'scss/templates/'
+        }))
         .pipe(sass().on('error', sass.logError))
 
         .pipe(autoprefixer({
@@ -68,7 +71,7 @@ gulp.task('browserSync', function() {
 gulp.task('serve', ['fileinclude', 'browserSync', 'injectsass'], function() {
     gulp.watch(scssSource, ['injectsass']);
     gulp.watch(source + '**/*.html', ['fileinclude', reload]);
-    gulp.watch(source + 'js/*.js', [reload]);
+    gulp.watch(source + 'js/*.js', ['fileinclude', reload]);
 });
 
 // BUILDS //////////////////////////

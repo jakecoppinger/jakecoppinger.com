@@ -1,10 +1,14 @@
 $(document).ready(function() {
-    $("h2").hover(
+    registerBackgroundImage("departing");
+    registerBackgroundImage("robot");
+});
 
+function registerBackgroundImage(imageName) {
+    $("h2." + imageName).hover(
         function() {
-            $("#backgroundimage").stop().fadeTo(200, 1);
+            $(".landingimage." + imageName).stop().fadeTo(200, 1);
         },
         function() {
-            $("#backgroundimage").stop().fadeTo(200, 0.0);
+            $(".landingimage." + imageName).stop().fadeTo(200, 0.0);
         });
-});
+}
