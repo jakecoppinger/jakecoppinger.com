@@ -19,7 +19,9 @@ var scssSource = source + "scss/**/*.scss";
 // HTML Templating
 gulp.task('html', function() {
     return gulp.src('source/**/*.tpl.html')
-        .pipe(fileinclude())
+        .pipe(fileinclude({
+            basepath: source + 'templates/'
+        }))
         .pipe(rename({
             extname: ""
         }))
