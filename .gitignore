@@ -6,4 +6,6 @@ node_modules/
 source/components
 source/images
 source/css/
+
 source/index.html
+source/departing_io.html
