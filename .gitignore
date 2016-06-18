@@ -2,7 +2,8 @@
 dist/
 node_modules/
 .tmp/
-source/components
 
+source/components
+source/images
 source/css/
 source/index.html

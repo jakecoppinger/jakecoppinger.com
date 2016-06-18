@@ -12,11 +12,11 @@ h1 {
 }
 
 @@include('_background_image.scss', {
-    "image": "departing", "size": 10, "url": "/images/departing.jpg"
+    "image": "departing", "size": 10, "url": "../images/departing.jpg"
 }
 
 ) @@include('_background_image.scss', {
-    "image": "robot", "size": 10, "url": "/images/robot.jpg"
+    "image": "robot", "size": 10, "url": "../images/robot.jpg"
 }
 
 ) #landingscreen {
