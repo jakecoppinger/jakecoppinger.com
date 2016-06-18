@@ -11,42 +11,33 @@ h1 {
     -moz-osx-font-smoothing: grayscale;
 }
 
+// Generating background images on landing
 @@include('_background_image.scss', {
-    "image": "transit-in-sydney",
-    "path":"landing",
-    "file":"transit-in-sydney.jpeg"
-})
+    "image": "transit-in-sydney", "path": "landing", "file": "transit-in-sydney.jpeg"
+}
 
-@@include('_background_image.scss', {
-    "image": "departing",
-    "path":"landing",
-    "file":"departing.jpeg"
-})
+) @@include('_background_image.scss', {
+    "image": "departing", "path": "landing", "file": "departing.jpeg"
+}
 
-@@include('_background_image.scss', {
-    "image": "swirlesque",
-    "path":"landing",
-    "file":"swirlesque.jpeg"
-})
+) @@include('_background_image.scss', {
+    "image": "swirlesque", "path": "landing", "file": "swirlesque.jpeg"
+}
 
-@@include('_background_image.scss', {
-    "image": "engineering-process",
-    "path":"landing",
-    "file":"engineering-process.jpeg"
-})
+) @@include('_background_image.scss', {
+    "image": "engineering-process", "path": "landing", "file": "engineering-process.jpeg"
+}
 
-@@include('_background_image.scss', {
-    "image": "films",
-    "path":"landing",
-    "file":"films.jpeg"
-})
+) @@include('_background_image.scss', {
+    "image": "films", "path": "landing", "file": "films.jpeg"
+}
 
-#landingscreen {
+) #landingscreen {
     height: 100vh;
 }
 
 #maintitle {
-    //text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
     font-smooth: never;
     mix-blend-mode: exclusion;
     text-align: center;
@@ -58,28 +49,12 @@ h1 {
     margin-right: auto;
     transform: translateY(-50%);
     font-family: akzidenz-grotesk_pro_regular;
-    //font-weight: 300;
     color: #FFFFFF;
     opacity: 1;
-    //background-color: #440000;
     h1 {
         color: #FFFFFF;
         font-size: calc(1.5em + (5vw * 0.5));
     }
-    /*
-    h2 {
-        font-size: calc(1em + (1vw * 0.5));
-        a {
-            border-bottom: none;
-            text-decoration: none;
-            transition: color 0.25s ease;
-            //color: #b7b7b7;
-            &:hover {
-                color: #270000;
-            }
-        }
-    }
-    */
     h3 {
         text-align: center;
         margin: 0 auto;
@@ -102,28 +77,23 @@ h1 {
     }
 }
 
-
 .social a {
-  text-transform: none;
-  text-decoration: none;
-  font-family: socicon !important;
-  letter-spacing: 1.5em;
-  line-height: 1.3;
-  font-size: -webkit-calc(0.9em + 0.2vw);
-  color: #a3a3a3;
-  border-bottom: none;
-  box-shadow: none;
-  
+    text-transform: none;
+    text-decoration: none;
+    font-family: socicon !important;
+    letter-spacing: 1.5em;
+    line-height: 1.3;
+    font-size: -webkit-calc(0.9em + 0.2vw);
+    color: #a3a3a3;
+    border-bottom: none;
+    box-shadow: none;
     -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .social a:hover {
-  color: #666;
+    color: #666;
 }
-
-
