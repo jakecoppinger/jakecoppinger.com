@@ -1,6 +1,6 @@
-@media (max-width: 640px) {
+@media (max-height: 480px) {
     div.landingimage.@@image {
-        background: url("../images/640/@@path/@@file");
+        background: url("../images/480/@@path/@@file");
         position: absolute;
         width: 100vw;
         height: 100vh;
@@ -19,7 +19,7 @@
 }
 
 
-@media (min-width: 641px) {
+@media (min-height: 481px) {
     div.landingimage.@@image {
         background: url("../images/720/@@path/@@file");
         position: absolute;
@@ -39,9 +39,9 @@
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 721px) {
     div.landingimage.@@image {
-        background: url("../images/1920/@@path/@@file");
+        background: url("../images/1080/@@path/@@file");
         position: absolute;
         width: 100vw;
         height: 100vh;
