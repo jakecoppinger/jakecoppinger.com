@@ -1,33 +1,41 @@
-
-
-html, body, h1 {
+html,
+body,
+h1 {
     margin: 0;
     padding: 0;
 }
+@media (min-width: 769px) {
+    div#backgroundimage {
+        background: url('https://placehold.it/1920x1080');
+    }
+}
 
+@media (max-width: 768px) {
+    div#backgroundimage {
+        background: url('https://placehold.it/1024x768');
+    }
+}
 
 div#backgroundimage {
-    z-index: -100;
     position: absolute;
     width: 100vw;
     height: 100vh;
-    /* Location of the image */
-    background-image: url(https://placehold.it/1024x768);
-    /* Background image is centered vertically and horizontally at all times */
+
     background-position: center center;
-    /* Background image doesn't tile */
-    background-repeat: no-repeat;
-    /* Background image is fixed in the viewport so that it doesn't move when 
-     the content's height is greater than the image's height */
-    background-attachment: fixed;
-    /* This is what makes the background image rescale based
-     on the container's size */
-    background-size: cover;
-    /* Set a background color that will be displayed
-     while the background image is loading */
-    background-color: #FF4545;
-    display: none;
+    // /* Background image doesn't tile */
+    // background-repeat: no-repeat;
+    // /* Background image is fixed in the viewport so that it doesn't move when 
+    //  the content's height is greater than the image's height */
+    // background-attachment: fixed;
+    // /* This is what makes the background image rescale based
+    //  on the container's size */
+    // background-size: cover;
+
+    background-color: #FF4545; // Debug
+    //    display: none;
 }
+
+
 
 #landingscreen {
     height: 100vh;
