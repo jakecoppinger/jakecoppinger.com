@@ -12,11 +12,34 @@ h1 {
 }
 
 @@include('_background_image.scss', {
+    "image": "transit-in-sydney",
+    "path":"landing",
+    "file":"transit-in-sydney.jpeg"
+})
+
+@@include('_background_image.scss', {
     "image": "departing",
     "path":"landing",
     "file":"departing.jpeg"
 })
 
+@@include('_background_image.scss', {
+    "image": "swirlesque",
+    "path":"landing",
+    "file":"swirlesque.jpeg"
+})
+
+@@include('_background_image.scss', {
+    "image": "engineering-process",
+    "path":"landing",
+    "file":"engineering-process.jpeg"
+})
+
+@@include('_background_image.scss', {
+    "image": "films",
+    "path":"landing",
+    "file":"films.jpeg"
+})
 
 #landingscreen {
     height: 100vh;

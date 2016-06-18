@@ -1,60 +1,34 @@
 @media (max-height: 480px) {
     div.landingimage.@@image {
         background: url("../images/480/@@path/@@file");
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        background-position: center center;
-        /* Background image doesn't tile */
-        background-repeat: no-repeat;
-        /* Background image is fixed in the viewport so that it doesn't move when 
-         the content's height is greater than the image's height */
-        background-attachment: fixed;
-        /* This is what makes the background image rescale based
-         on the container's size */
-        background-size: cover;
-        background-color: #FF4545; // Debug
-        display: none;
     }
 }
-
 
 @media (min-height: 481px) {
     div.landingimage.@@image {
         background: url("../images/720/@@path/@@file");
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        background-position: center center;
-        /* Background image doesn't tile */
-        background-repeat: no-repeat;
-        /* Background image is fixed in the viewport so that it doesn't move when 
-         the content's height is greater than the image's height */
-        background-attachment: fixed;
-        /* This is what makes the background image rescale based
-         on the container's size */
-        background-size: cover;
-        background-color: #FF4545; // Debug
-        display: none;
     }
 }
 
-@media (min-width: 721px) {
+@media (min-height: 721px) {
     div.landingimage.@@image {
         background: url("../images/1080/@@path/@@file");
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        background-position: center center;
-        /* Background image doesn't tile */
-        background-repeat: no-repeat;
-        /* Background image is fixed in the viewport so that it doesn't move when 
-         the content's height is greater than the image's height */
-        background-attachment: fixed;
-        /* This is what makes the background image rescale based
-         on the container's size */
-        background-size: cover;
-        background-color: #FF4545; // Debug
-        display: none;
     }
+}
+
+div.landingimage.@@image {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    /* Background image is fixed in the viewport so that it doesn't move when 
+         the content's height is greater than the image's height */
+    background-attachment: fixed;
+    /* This is what makes the background image rescale based
+         on the container's size */
+    background-size: cover;
+    background-color: #FF4545; // Debug
+    display: none;
 }
