@@ -4,7 +4,7 @@ $(document).ready(function() {
 });
 
 function registerBackgroundImage(imageName) {
-    $("h2." + imageName).hover(
+    $("#landingscreen a." + imageName).hover(
         function() {
             $(".landingimage." + imageName).stop().fadeTo(200, 1);
         },

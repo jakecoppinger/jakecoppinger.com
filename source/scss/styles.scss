@@ -22,6 +22,7 @@ h1 {
 }
 
 #maintitle {
+    text-align:center;
     position: relative;
     width: 90%;
     max-width: 45em;
@@ -32,6 +33,7 @@ h1 {
     font-family: akzidenz-grotesk_pro_regular;
     //font-weight: 300;
     color: #7F7F7F;
+    //background-color: #440000;
     h1 {
         color: #000000;
         font-size: calc(1.5em + (5vw * 0.5));
@@ -49,6 +51,27 @@ h1 {
         }
     }
     h3 {
+        text-align:center;
+        margin:0 auto;
         max-width: 25em;
     }
+
+    ul {
+        list-style: none;
+        font-size:calc(2em + (1vw * 0.5));
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: opacity .3s;
+            &:hover {
+                color:#000000;
+            }
+        }
+
+    }
+    li {
+        text-decoration: none;
+    }
+
+
 }
