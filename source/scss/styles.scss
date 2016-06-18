@@ -9,6 +9,51 @@ h1 {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-shadow: none;
+}
+
+section#header {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 90vw;
+    line-height: 1;
+    h1 {
+        font-family: akzidenz-grotesk_pro_regular;
+        font-size: calc(3em + (5vw * 0.5));
+        a {
+            // Aka Jake Coppinger
+            letter-spacing: -0.04em;
+            color: inherit;
+            opacity: 0.4;
+            text-decoration: none;
+        }
+    }
+}
+
+section#content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    h2 {
+        font-family: akzidenz-grotesk_pro_light;
+        color: #7b7b7b;
+        font-size: calc(1.5em + 2vw);
+        line-height: 1.2;
+        font-weight: 300;
+        color: #525252;
+        font-size: 5vmin;
+        line-height: 1em;
+        margin-top: 0;
+        margin-bottom: .2em;
+        letter-spacing: -.02em;
+        -webkit-animate: color;
+        i {
+            font-family: Georgia, serif;
+            color: #000;
+        }
+    }
 }
 
 // Generating background images on landing
