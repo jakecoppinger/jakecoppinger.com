@@ -1,11 +1,17 @@
+# System metadata
 .DS_Store
+
+
+# Folders that are compiled
 dist/
 node_modules/
 .tmp/
 
+
+# Files that are compiled
+
 source/components
 source/images
 source/css/
-
 source/index.html
 source/departing_io.html
