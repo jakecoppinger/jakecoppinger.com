@@ -67,6 +67,12 @@ section.header {
             mix-blend-mode: normal;
             opacity: 0.9;
         }
+        &.difference {
+            a {
+                color: white;
+            }
+            mix-blend-mode: difference;
+        }
     }
 }
 
@@ -226,8 +232,6 @@ section.content {
 //     top: 0;
 //     z-index: -1;
 // }
-
-
 .video_embed {
     position: relative;
     height: 0px;
@@ -235,7 +239,7 @@ section.content {
     max-width: 100%;
     height: auto;
     /*z-index: -1;*/
-    &.widescreen{
+    &.widescreen {
         padding-bottom: 56.25%;
     }
     &.ultrawidescreen {

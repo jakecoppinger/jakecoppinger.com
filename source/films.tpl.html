@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Films - Jake Coppinger</title>
+    <meta name="description" content="The Engineering Process is a film telling the story of an engineered world, and how engineers turn an idea into reality." /> @@include('templates/_imports.html')
+</head>
+
+<body>
+
+    <div class="imagetext">
+        @@include('templates/_srcset.html',{ "class":"topbackground", "path": "films/montage.jpeg", "alt": "Traveller using Departing.io" })
+        <section class="header floating difference">
+            <h1><a href="/">Jake Coppinger&nbsp;/</a> Films</h1>
+        </section>
+    </div>
+
+<!-- 
+    <section class="header">
+        <h1><a href="/">Jake Coppinger&nbsp;/</a> Films</h1>
+    </section> -->
+
+
+
+    <section class="content">
+        @@include(markdown('content/films.md'))
+    </section>
+
+
+
+    @@include('templates/_srcset.html',{ "class":"fullwidth", "path": "the_engineering_process/physics_paths.jpeg", "alt": "The motion keyframes created by the physics collision simulation" })
+    <section class="content">
+        <p class="imagecaption">The motion keyframes created by the physics collision simulation</p>
+    </section>
+    @@include('templates/_srcset.html',{ "class":"fullwidth", "path": "the_engineering_process/animating_the_plane.jpeg", "alt": "Designing the path of the plane" })
+    <section class="content">
+        <p class="imagecaption">Designing the path of the plane</p>
+    </section>
+</body>
