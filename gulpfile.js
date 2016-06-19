@@ -31,7 +31,11 @@ gulp.task('browserSync', function() {
     })
 })
 
-gulp.task('serve', ['html', 'browserSync', 'sass', 'resizeimages'], function() {
+gulp.task('serve', function(callback) {
+    runSequence(
+        ['html', 'sass', 'resizeimages', 'browserSync'],
+        callback);
+
     gulp.watch(scssSource, ['pipesass']);
     gulp.watch([source + '**/*.html', source + 'content/**/*.md', ], ['html', reload]);
     gulp.watch(source + 'js/*.js', ['html', reload]);
@@ -39,10 +43,10 @@ gulp.task('serve', ['html', 'browserSync', 'sass', 'resizeimages'], function() {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('build', ['clean'], function(cb) {
+gulp.task('build', ['clean'], function(callback) {
     runSequence(
         ['js', 'html', 'sass', 'resizeimages'], ['copy'],
-        cb);
+        callback);
 });
 
 gulp.task('copy', function() {

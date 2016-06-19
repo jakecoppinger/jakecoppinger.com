@@ -26,7 +26,6 @@
     "gulp-concat": "^2.6.0",
     "gulp-file-include": "^0.13.7",
     "gulp-image-resize": "^0.8.0",
-    "gulp-newer": "^1.2.0",
     "gulp-pipes": "^0.1.6",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
