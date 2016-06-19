@@ -13,6 +13,8 @@ var pipes = require('gulp-pipes');
 var sourcemaps = require('gulp-sourcemaps');
 var concatCss = require('gulp-concat-css');
 var concat = require('gulp-concat');
+var nunjucksRender = require('gulp-nunjucks-render');
+
 
 var source = "source/";
 var build = "dist/"
@@ -33,7 +35,19 @@ gulp.task('html', function() {
         .pipe(rename({
             extname: ".html"
         }))
-        .pipe(gulp.dest('source'))
+        .pipe(gulp.dest(source))
+});
+
+
+gulp.task('nunjucks', function() {
+  // Gets .html and .nunjucks files in pages
+  return gulp.src(source + 'pages/index.html')
+  // Renders template with nunjucks
+  .pipe(nunjucksRender({
+      path: [source + '/templates']
+    }))
+  // output files in app folder
+  .pipe(gulp.dest(source))
 });
 
 // Sass
