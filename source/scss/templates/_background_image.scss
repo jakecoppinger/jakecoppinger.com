@@ -1,18 +1,18 @@
-@media (max-height: 480px) {
-    div.landingimage.@@image {
-        background: url("../images/480/@@path/@@file");
-    }
-}
-
-@media (min-height: 481px) {
+@media (max-width: 720px) {
     div.landingimage.@@image {
         background: url("../images/720/@@path/@@file");
     }
 }
 
-@media (min-height: 721px) {
+@media (min-width: 721px) {
     div.landingimage.@@image {
-        background: url("../images/1080/@@path/@@file");
+        background: url("../images/1200/@@path/@@file");
+    }
+}
+
+@media (min-width: 1200px) {
+    div.landingimage.@@image {
+        background: url("../images/1920/@@path/@@file");
     }
 }
 

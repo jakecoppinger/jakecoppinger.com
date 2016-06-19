@@ -12,11 +12,23 @@ h1 {
     text-shadow: none;
 }
 
+div.imagetext {
+    position: relative;
+    width: 100%;
+    /* for IE 6 */
+    &.section {
+        // position: relative;
+        // width: 100%;
+        // /* for IE 6 */
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 section.header {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
     width: 90vw;
     line-height: 1;
     h1 {
@@ -25,20 +37,48 @@ section.header {
         a {
             // Aka Jake Coppinger
             letter-spacing: -0.04em;
-            color: inherit;
-            opacity: 0.4;
+            color: #2D2D2D;
+
             text-decoration: none;
+        }
+        &.inverted {
+            //opacity:0.8;
+            a {
+                color: #000000;
+            }
+            color: #FFFFFF;
+        }
+    }
+    &.floating {
+        mix-blend-mode: overlay;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(0%, -50%);
+        margin-top: 0vw;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        h1 {
+            text-align: center;
+            font-size: calc(2em + (5vw * 0.5));
         }
     }
 }
 
+.clear {
+    clear: both;
+}
+
 section.content {
+    margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
-    width: 80vw;
+    width: 70vw;
     h2 {
-        font-family: akzidenz-grotesk_pro_light;
-        color: #7b7b7b;
+        font-family: akzidenz-grotesk_pro_regular;
+        //color: #7b7b7b;
         font-size: calc(1.5em + 2vw);
         line-height: 1.2;
         font-weight: 300;
@@ -139,6 +179,16 @@ section.content {
     transition: all 0.5s ease;
 }
 
+.difference {
+    mix-blend-mode: exclusion;
+}
+
 .social a:hover {
     color: #666;
 }
+
+// img.topbackground {
+//     position: absolute;
+//     top: 0;
+//     z-index: -1;
+// }

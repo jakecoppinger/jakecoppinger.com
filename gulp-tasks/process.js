@@ -68,7 +68,7 @@ gulp.task('js', function() {
 });
 
 var resizeImageTasks = [];
-[1080, 720, 480].forEach(function(size) {
+[1920, 1200, 720].forEach(function(size) {
     var output = source + 'images/' + size + '/';
     var resizeImageTask = 'resize_' + size;
     gulp.task(resizeImageTask, function() {
@@ -76,7 +76,7 @@ var resizeImageTasks = [];
             .pipe(changed(output))
             .pipe(imageResize({
                 format: 'jpeg',
-                height: size,
+                width: size,
                 quality: 0.9,
                 upscale: false
             }))

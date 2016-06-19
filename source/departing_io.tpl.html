@@ -8,22 +8,28 @@
 </head>
 
 <body>
-    <section class="header">
-        <h1><a href="/">Jake Coppinger&nbsp;/</a> Departing.io</h1>
-    </section>
-
-    <div class="fullwidthimage films">
+    <div class="imagetext">
+        @@include('_srcset.html',{ "class":"topbackground", "path": "departing_io/cold_walking.jpeg", "alt": "Traveller using Departing.io" })
+        <section class="header floating">
+            <h1 class="inverted"><a href="/">Jake Coppinger&nbsp;/</a> Departing.io</h1>
+        </section>
     </div>
 
-    @@include('tem')
+<!--     <div class="fullwidthimage films">
+    </div> -->
 
-<img srcset="/static/images/project/departing_io/1920/cold-walking.jpg 1920w, /static/images/project/departing_io/1200/cold-walking.jpg 1200w, /static/images/project/departing_io/640/cold-walking.jpg 640w" alt="Traveller using Departing.io">
-
-
+    <div class="clear"></div>
     <section class="content">
-        <h2 ><b><a target="_blank" href="http://www.departing.io">departing.io</a></b> is a web application designed to answer one question, and answer it well:<br><i>“when will the next bus come?”</i></h2>
+        <h2><b><a target="_blank" href="http://www.departing.io">departing.io</a></b> is a web application designed to answer one question, and answer it well:<br><i>“when will the next bus come?”</i></h2>
         <br>
         <br>
+
+        <h3>Philosophy</h3>
+        <p>While the software for planning trips is well established (such as Google Maps) I found it was still a chore to find when the next bus would arrive. The LED screens at major bus stations are helpful but they may only show 5 buses at a time - which may not include the one you are looking for. I created Designless.io for the sole purpose of finding when the next bus on a route will depart from a given stop.</p>
+
         <p>A web app for the Canberra bus system, <a href="http://www.action.act.gov.au">ACTION</a>. Built with HTML5 Canvas and modern web technologies.</p>
+
+
+
     </section>
 </body>
