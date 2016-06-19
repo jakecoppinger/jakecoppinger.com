@@ -11,6 +11,7 @@ var uglify = require('gulp-uglify');
 var markdown = require('markdown');
 var pipes = require('gulp-pipes');
 var sourcemaps = require('gulp-sourcemaps');
+var newer = require('gulp-newer');
 
 var source = "source/";
 var build = "dist/"
@@ -76,14 +77,14 @@ var resizeImageTasks = [];
     var resizeImageTask = 'resize_' + size;
     gulp.task(resizeImageTask, function() {
         return gulp.src(source + 'original_images/**/*.{jpg,png,tiff}')
-            .pipe(changed(output))
+            .pipe(newer(output))
             .pipe(imageResize({
                 format: 'jpeg',
                 width: size,
                 quality: 0.9,
                 upscale: false
             }))
-            .pipe(pipes.image.optimize())
+            //.pipe(pipes.image.optimize())
             .pipe(gulp.dest(output))
     });
     resizeImageTasks.push(resizeImageTask);
