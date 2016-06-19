@@ -13,6 +13,13 @@ var scssSource = source + "scss/**/*.scss"
 
 require('require-dir')('./gulp-tasks');
 
+gulp.task('pipesass', ['sass'], function() {
+    return gulp.src(source + 'css')
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
@@ -25,7 +32,7 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('serve', ['html', 'browserSync', 'sass', 'resizeimages'], function() {
-    gulp.watch(scssSource, ['sass']);
+    gulp.watch(scssSource, ['pipesass']);
     gulp.watch([source + '**/*.html', source + 'content/**/*.md', ], ['html', reload]);
     gulp.watch(source + 'js/*.js', ['html', reload]);
 });

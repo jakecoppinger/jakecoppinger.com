@@ -6,7 +6,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var changed = require('gulp-changed');
 var imageResize = require('gulp-image-resize');
 var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var markdown = require('markdown');
@@ -54,9 +53,7 @@ gulp.task('sass', function() {
             console.log(details.name + ': ' + details.stats.minifiedSize);
         }))
         .pipe(gulp.dest(source + "css"))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        
 });
 
 // JavaScript
