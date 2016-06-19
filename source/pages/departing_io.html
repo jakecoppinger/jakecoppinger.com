@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Departing.io - Jake Coppinger</title>
-    <meta name="description" content="Departing.io is a web application designed to answer one question and answer it well: when will the next bus come?" />@@include('templates/_imports.html')
-</head>
-
-<body>
-    <div class="imagetext">
-        @@include('templates/_srcset.html',{ "class":"topbackground", "path": "departing_io/cold_walking.jpeg", "alt": "Traveller using Departing.io" })
-        <section class="header floating">
-            <h1><a href="/">Jake Coppinger&nbsp;/</a> Departing.io</h1>
-        </section>
-    </div>
-    <div class="clear"></div>
-    <section class="content">
-        @@include(markdown('content/departing_io.md'))
+{% extends "base.njk" %} {% block title %}Departing.io{% endblock %} {% block description %}Departing.io is a web application designed to answer one question and answer it well: when will the next bus come?{% endblock %} {% block body %}
+<div class="imagetext">
+    {{ n.image('templates/_srcset.html','departing_io/cold_walking.jpeg','Traveller using Departing.io' )}}
+    <section class="header floating">
+        <h1><a href="/">Jake Coppinger&nbsp;/</a> Departing.io</h1>
     </section>
-</body>
+</div>
+<div class="clear"></div>
+<section class="content">
+    {% markdown 'markdown/departing_io.md' %}
+</section>
+{% endblock %}

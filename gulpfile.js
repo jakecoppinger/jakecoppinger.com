@@ -33,14 +33,15 @@ gulp.task('browserSync', function() {
 
 gulp.task('serve', function(callback) {
     runSequence(
-        ['resizeimages','uglifyjs','html','sass'],['concatjs'],['browserSync'],
+        ['resizeimages', 'uglifyjs', 'html', 'sass'], ['concatjs'], ['browserSync'],
         callback);
 
     gulp.watch(scssSource, ['pipesass']);
-    gulp.watch(
-        [source + '**/*.html', source + 'content/**/*.md', ], ['html', reload]
-    );
-    gulp.watch(source + 'js/*.js', ['uglifyjs','concatjs']);
+    gulp.watch([
+        source + 'pages/**/*.html',
+        source + 'templates/**/*.{njk,md}'
+    ], ['html', reload]);
+    gulp.watch(source + 'js/*.js', ['uglifyjs', 'concatjs']);
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));

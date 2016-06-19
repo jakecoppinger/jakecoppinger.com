@@ -46,10 +46,7 @@ gulp.task('html', function() {
     markdown.register(env, marked);
 
     // Gets .html and .nunjucks files in pages
-    return gulp.src([source + 'pages/index.html',
-            source + 'pages/swirlesque.html',
-            source + 'pages/the_engineering_process.html'
-        ])
+    return gulp.src([source + 'pages/**/*.html'])
         // Renders template with nunjucks
         .pipe(nunjucksRender(env))
         // output files in app folder
