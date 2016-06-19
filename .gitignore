@@ -1,19 +1,23 @@
 # System metadata
 .DS_Store
 
-
 # Folders that are compiled
 dist/
 node_modules/
 .tmp/
 
-*.min.js
-
-# Files that are compiled
-
+# Ignore bower components 
 source/js/components
+
+# Ignore compressed images
 source/images
+
+# Ignore compiled CSS
 source/css/
-source/index.html
-source/departing_io.html
-source/swirlesque.html
+
+# Ignore compiled HTML
+source/*.html
+!source/*.tpl.html
+
+# Ignore compiled JS
+*.min.js
