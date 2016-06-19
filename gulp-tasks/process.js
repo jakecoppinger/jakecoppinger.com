@@ -74,25 +74,22 @@ gulp.task('uglifyjs', function() {
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(sourcemaps.init())
         .pipe(rename({
             extname: ""
         }))
         .pipe(rename({
             extname: ".min.js"
         }))
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest(source + "js"));
 });
 
 gulp.task('concatjs', function() {
     return gulp.src([
-            source + '*.min.js',
-            source + 'js/components/jquery/dist/jquery.min.js'
+            source + 'js/components/jquery/dist/jquery.min.js',
+            source + 'js/*.min.js',
+            '!' + source + 'js/scripts.min.js'
         ])
-        .pipe(sourcemaps.init())
         .pipe(concat('scripts.min.js'))
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest(source + "js"));
 });
 

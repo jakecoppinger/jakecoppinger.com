@@ -40,7 +40,7 @@ gulp.task('serve', function(callback) {
     gulp.watch(
         [source + '**/*.html', source + 'content/**/*.md', ], ['html', reload]
     );
-    gulp.watch(source + 'js/*.js', ['html', reload]);
+    gulp.watch(source + 'js/*.js', ['uglifyjs','concatjs']);
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
