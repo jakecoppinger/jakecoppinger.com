@@ -9,7 +9,7 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
-
+var markdown = require('markdown');
 var pipes = require('gulp-pipes');
 
 var source = "source/";
@@ -20,7 +20,10 @@ var scssSource = source + "scss/**/*.scss";
 gulp.task('html', function() {
     return gulp.src('source/**/*.tpl.html')
         .pipe(fileinclude({
-            basepath: source + 'templates/'
+            basepath: source,
+            filters: {
+                markdown: markdown.parse
+            }
         }))
         .pipe(rename({
             extname: ""

@@ -26,7 +26,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('serve', ['html', 'browserSync', 'sass', 'resizeimages'], function() {
     gulp.watch(scssSource, ['sass']);
-    gulp.watch(source + '**/*.html', ['html', reload]);
+    gulp.watch([source + '**/*.html', source + 'content/**/*.md', ], ['html', reload]);
     gulp.watch(source + 'js/*.js', ['html', reload]);
 });
 
