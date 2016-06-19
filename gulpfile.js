@@ -5,6 +5,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var merge = require('merge-stream');
 var size = require('gulp-size');
+
 var reload = browserSync.reload;
 
 var source = "source/"
@@ -41,6 +42,11 @@ gulp.task('serve', function(callback) {
         source + 'pages/**/*.html',
         source + 'templates/**/*.{njk,md}'
     ], ['html', reload]);
+
+    gulp.watch([
+        source + 'data.json'
+    ], ['html', reload]);
+
     gulp.watch(source + 'js/*.js', ['uglifyjs', 'concatjs']);
 });
 

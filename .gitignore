@@ -5,6 +5,7 @@
 dist/
 node_modules/
 .tmp/
+source/film/
 
 # Ignore bower components 
 source/js/components

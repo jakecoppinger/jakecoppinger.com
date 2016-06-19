@@ -16,6 +16,7 @@ var concat = require('gulp-concat');
 var nunjucksRender = require('gulp-nunjucks-with-env'); //require('gulp-nunjucks-render');
 var markdown = require('nunjucks-markdown');
 var marked = require('marked');
+var data = require('gulp-data');
 
 
 var source = "source/";
@@ -48,6 +49,9 @@ gulp.task('html', function() {
     // Gets .html and .nunjucks files in pages
     return gulp.src([source + 'pages/**/*.html'])
         // Renders template with nunjucks
+        .pipe(data(function() {
+            return require('../source/data.json')
+        }))
         .pipe(nunjucksRender(env))
         // output files in app folder
         .pipe(gulp.dest(source))
