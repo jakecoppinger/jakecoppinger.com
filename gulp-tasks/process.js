@@ -81,12 +81,10 @@ gulp.task('sass', function() {
 });
 
 // JavaScript
-var jsFiles = source + "js/**/*.js";
-var jsDest = build + "js";
-
 gulp.task('uglifyjs', function() {
     return gulp.src([
-            source + 'js/*.js'
+            source + 'js/*.js',
+            "!" + source + 'js/*.min.js'
         ])
         .pipe(sourcemaps.init())
         .pipe(uglify())
