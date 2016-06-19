@@ -18,6 +18,8 @@
     color: #FFFFFF;
     opacity: 1;
     h1 {
+        margin: 0;
+        padding: 0;
         color: #FFFFFF;
         font-size: calc(1.5em + (5vw * 0.5));
     }
@@ -27,6 +29,7 @@
         max-width: 25em;
     }
     ul {
+        padding:0;
         list-style: none;
         font-size: calc(1.3em + (1vw * 0.5));
         a {

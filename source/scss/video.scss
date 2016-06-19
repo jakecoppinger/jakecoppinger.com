@@ -26,8 +26,21 @@
     height: 100%;
 }
 
-div.video_section {
-    margin-bottom: 5%;
-    overflow: overlay;
-    /*background-color:#a595ff;*/
+
+section.credits {
+    margin-left:2em;
+}
+
+@media all and (min-width:90em) {
+    section.film, section.credits {
+        float: left;
+        display: inline;
+    }
+
+    section.film {
+        width:60%;
+    }
+    section.credits {
+        width:calc(40% - 2em);
+    }
 }

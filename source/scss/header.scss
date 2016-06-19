@@ -3,18 +3,28 @@ section.header {
     margin-right: auto;
     width: 90vw;
     line-height: 1;
+    font-family: akzidenz-grotesk_pro_regular;
+
+    margin-bottom: calc(1vh + 1.5vw);
+
+    a {
+        // Aka Jake Coppinger
+        letter-spacing: -0.04em;
+        color: #2D2D2D;
+        text-decoration: none;
+    }
     h1 {
-        font-family: akzidenz-grotesk_pro_regular;
+        margin-top: calc(1vh + 1vw);
         font-size: calc(3em + (5vw * 0.5));
-        a {
-            // Aka Jake Coppinger
-            letter-spacing: -0.04em;
-            color: #2D2D2D;
-            text-decoration: none;
-        }
+        margin-bottom: 0;
         &.inverted {
             //opacity:0.8;
         }
+    }
+    h2 {
+        margin-top: calc(1.5vh + 2vw);
+        margin-bottom: 0;
+        font-size: calc(3em + (5vw * 0.5));
     }
     &.floating {
         mix-blend-mode: overlay;
@@ -28,6 +38,11 @@ section.header {
         right: 0;
         margin: 0 auto;
         color: #FFFFFF;
+
+        h1,h2 {
+            margin-top:0;
+        }
+
         h1 {
             text-align: center;
             font-size: calc(1.5em + 5vw);
