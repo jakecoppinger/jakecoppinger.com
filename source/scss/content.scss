@@ -1,32 +1,33 @@
 section.content {
-    margin-top: calc(1vh + 3vw);
     margin-left: auto;
     margin-right: auto;
     width: 90vw;
     max-width: 50em;
-
     font-family: akzidenz-grotesk_pro_regular;
     font-weight: 300;
-
     &.filmpage {
         max-width: none;
     }
-
+    h1,
     h2 {
-        //color: #7b7b7b;
-        font-size: calc(1.5em + 2vw);
         line-height: 1.2;
         color: #525252;
-        font-size: 5vmin;
         line-height: 1em;
-        margin-top: 0.6em;
-        margin-bottom: 0em;
+        margin-top: 0em;
+        margin-bottom: 0.7em;
         letter-spacing: -.02em;
         -webkit-animate: color;
         i {
             font-family: Georgia, serif;
             color: #000;
         }
+    }
+    h1 {
+        font-size: calc(1.5em + 2vw);
+    }
+    h2 {
+        //color: #7b7b7b;
+        font-size: calc(0.8em + 1vw);
     }
     code {
         font-family: Menlo, Monaco, "Courier New", Courier, monospace;
@@ -45,6 +46,7 @@ section.content {
         line-height: 1.58;
         letter-spacing: -.003em;
         font-size: calc(0.8em + 0.4vw);
+        margin-top: 0;
     }
     a {
         color: #222;
