@@ -11,6 +11,7 @@ var uglify = require('gulp-uglify');
 var markdown = require('markdown');
 var pipes = require('gulp-pipes');
 var sourcemaps = require('gulp-sourcemaps');
+var concatCss = require('gulp-concat-css');
 
 var source = "source/";
 var build = "dist/"
@@ -51,12 +52,14 @@ gulp.task('sass', function() {
             cascade: false
         }))
         .pipe(cleanCSS({ debug: true }, function(details) {
-            console.log(details.name + ': ' + details.stats.originalSize);
-            console.log(details.name + ': ' + details.stats.minifiedSize);
+            console.log("<< " + details.name + ': ' + (details.stats.originalSize/1024).toFixed(2) + "kb");
+            console.log(">> " + details.name + ': ' + (details.stats.minifiedSize/1024).toFixed(2) + "kb");
         }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(source + "css"))
-        
+        .pipe(sourcemaps.init())
+        .pipe(concatCss("style.min.css"))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(source + "css"))     
 });
 
 // JavaScript
