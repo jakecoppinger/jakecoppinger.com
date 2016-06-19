@@ -1,71 +1,68 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Swirlesque - Jake Coppinger</title>
-    <meta name="description" content="A new form of gesture based human-computer interaction: Jake Coppinger demonstrated Swirlesque at TEDxSydney, and at the Intel International Science and Engineering Fair." /> @@include('templates/_imports.html')
-</head>
 
-<body>
-    <div class="imagetext">
-        @@include('templates/_srcset.html',{ "class":"topbackground", "path": "swirlesque/jake_coppinger_tedxsydney_1.jpeg", "alt": "Jake Coppinger presenting at TEDxSydney" })
-        <section class="header floating normal">
-            <h1><a href="/">Jake Coppinger&nbsp;/</a> Swirlesque</h1>
-        </section>
-    </div>
-    <div class="clear"></div>
-    <section class="content">
-        <h1>Swirlesque: A new form of gesture based human-computer interaction</h1>
-        <h2>TEDxSydney 2014<br>
+
+{% extends "base.njk" %}
+ {% block title %}Swirlesque{% endblock %} {% block description %}A new form of gesture based human-computer interaction: Jake Coppinger demonstrated Swirlesque at TEDxSydney, and at the Intel International Science and Engineering Fair.{% endblock %} {% block body %}
+
+
+<div class="imagetext">
+    {{ n.image("topbackground","swirlesque/jake_coppinger_tedxsydney_1.jpeg","Jake Coppinger presenting at TEDxSydney" ) }}
+    <section class="header floating normal">
+        <h1><a href="/">Jake Coppinger&nbsp;/</a> Swirlesque</h1>
+    </section>
+</div>
+<div class="clear"></div>
+<section class="content">
+    <h1>Swirlesque: A new form of gesture based human-computer interaction</h1>
+    <h2>TEDxSydney 2014<br>
 Intel ISEF 2014<br>
 BHP Billiton Science &amp; Engineering Awards 2013</h2>
-        <br>
-        <p>While computers in recent years have become far more powerful, the ways of interacting with them haven't changed greatly since the beginning - keyboards, mice, and lately touch screens. The new field of wearable technology has exploded in the last 5 years, but these old forms of human computer interaction are not practical for these mobile systems. Swirlesque is a new form of human-computer interaction which can recognise natural gestures and performs actions. It is suited to 'always on' systems because it ‘disappears’ when in use -- the best interface is no interface. The form of interaction is an extension of a natural form of human communication, hand gestures, which are instinctively easy to remember. It can communicate with an Android phone app, and because smart phones have an ever-present internet connection, it can interact with the world through the ‘internet of things’.</p>
-        <h1>The Film</h1>
-    </section>
-    @@include('templates/_youtube.html',{ "id":"2jJnkOCyvvM" })
-    <section class="content">
-        <h1>TEDxSydney 2014 talk</h1>
-    </section>
-    @@include('templates/_youtube.html',{ "id":"vtvcRfo887Y" })
-    <section class="content">
-        <h1>Media Appearances</h1>
-        <div class="video_section">
-            <div class="sixty column responsive">
-                @@include('templates/_youtube.html',{ "id":"Tb1UAHiXuHc" })
-            </div>
-            <div class="fourty column responsive">
-                <h3>7:30 Report with Chris Kimball / 2014</h3>
-                <p>A segment on ABC 7:30 report showcasing my 'Swirlesque' project and my future journeys.</p>
-            </div>
+    <br>
+    <p>While computers in recent years have become far more powerful, the ways of interacting with them haven't changed greatly since the beginning - keyboards, mice, and lately touch screens. The new field of wearable technology has exploded in the last 5 years, but these old forms of human computer interaction are not practical for these mobile systems. Swirlesque is a new form of human-computer interaction which can recognise natural gestures and performs actions. It is suited to 'always on' systems because it ‘disappears’ when in use -- the best interface is no interface. The form of interaction is an extension of a natural form of human communication, hand gestures, which are instinctively easy to remember. It can communicate with an Android phone app, and because smart phones have an ever-present internet connection, it can interact with the world through the ‘internet of things’.</p>
+    <h1>The Film</h1>
+</section>
+{{ n.youtube("2jJnkOCyvvM")}}
+<section class="content">
+    <h1>TEDxSydney 2014 talk</h1>
+</section>
+{{ n.youtube("vtvcRfo887Y")}}
+<section class="content">
+    <h1>Media Appearances</h1>
+    <div class="video_section">
+        <div class="sixty column responsive">
+            {{ n.youtube("Tb1UAHiXuHc")}}
         </div>
-        <div class="video_section">
-            <div class="sixty column responsive">
-                @@include('templates/_youtube.html',{ "id":"9PwltXKtkKk" })
-            </div>
-            <div class="fourty column responsive">
-                <h3>ABC News (Swirlesque report) / 2014</h3>
-                <p>A short segment on ABC News showcasing my 'Swirlesque' project.</p>
-            </div>
+        <div class="fourty column responsive">
+            <h2>7:30 Report with Chris Kimball / 2014</h2>
+            <p>A segment on ABC 7:30 report showcasing my 'Swirlesque' project and my future journeys.</p>
         </div>
-        <div class="video_section">
-            <div class="sixty column responsive">
-                @@include('templates/_youtube.html',{ "id":"rTIKMovx26k" })
-            </div>
-            <div class="fourty column responsive">
-                <h3>Intel ISEF 2014: Australian Students on the World Stage</h3>
-                <p>High school students representing Australia at the Intel International Science and Engineering Fair 2014 in LA talk about what motivated them to get interested in STEM and project-based learning through science fairs.</p>
-            </div>
+    </div>
+    <div class="video_section">
+        <div class="sixty column responsive">
+            {{ n.youtube("9PwltXKtkKk")}}
         </div>
-        <div class="video_section">
-            <div class="sixty column responsive">
-                @@include('templates/_youtube.html',{ "id":"8vt5k36GJIM" })
-            </div>
-            <div class="fourty column responsive">
-                <h3>Australia at Intel International Science and Engineering Fair (ISEF) 2014 - 7 News</h3>
-                <p>A Seven News report showcasing the team representing Australia in the 2014 Intel International Science and Engineering Fair in Los Angeles, California. </p>
-            </div>
+        <div class="fourty column responsive">
+            <h2>ABC News (Swirlesque report) / 2014</h2>
+            <p>A short segment on ABC News showcasing my 'Swirlesque' project.</p>
         </div>
-    </section>
-</body>
+    </div>
+    <div class="video_section">
+        <div class="sixty column responsive">
+            {{ n.youtube("rTIKMovx26k")}}
+        </div>
+        <div class="fourty column responsive">
+            <h2>Intel ISEF 2014: Australian Students on the World Stage</h2>
+            <p>High school students representing Australia at the Intel International Science and Engineering Fair 2014 in LA talk about what motivated them to get interested in STEM and project-based learning through science fairs.</p>
+        </div>
+    </div>
+    <div class="video_section">
+        <div class="sixty column responsive">
+            {{ n.youtube("8vt5k36GJIM")}}
+        </div>
+        <div class="fourty column responsive">
+            <h2>Australia at Intel International Science and Engineering Fair (ISEF) 2014 - 7 News</h2>
+            <p>A Seven News report showcasing the team representing Australia in the 2014 Intel International Science and Engineering Fair in Los Angeles, California. The team was selected through the BHP Billiton Science and Engineering Awards and included Jake Coppinger, Lewis Nitschinsk, Conroy Cheers, and Viney Kumar. Lewis Nitschinsk was awarded two special awards including a scholarship from the Arizona State University. Ethan Butson from STANSW and also BHP Billiton Science and Engineering Awards prize winner was also in attendance and picked up a Special and a Grand Award.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
