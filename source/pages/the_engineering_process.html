@@ -1,26 +1,24 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.njk" %} {% block title %}The Engineering Process{% endblock %} {% block description %}The Engineering Process is a film telling the story of an engineered world, and how engineers turn an idea into reality.{% endblock %} {% block body %}
+<section class="header">
+    <h1><a href="/">Jake Coppinger&nbsp;/</a> The&nbsp;Engineering Process</h1>
+</section>
+{{ n.youtube("7SKrGiR3HeU")}}
+<section class="content">
+    {% markdown 'markdown/the_engineering_process.md'%}
+</section>
 
-<head>
-    <meta charset="UTF-8">
-    <title>The Engineering Process - Jake Coppinger</title>
-    <meta name="description" content="The Engineering Process is a film telling the story of an engineered world, and how engineers turn an idea into reality." /> @@include('templates/_imports.html')
-</head>
 
-<body>
-    <section class="header">
-        <h1><a href="/">Jake Coppinger&nbsp;/</a> The&nbsp;Engineering Process</h1>
-    </section>
-    @@include('templates/_youtube.html',{ "id":"7SKrGiR3HeU" })
-    <section class="content">
-        @@include(markdown('content/the_engineering_process.md'))
-    </section>
-    @@include('templates/_srcset.html',{ "class":"fullwidth", "path": "the_engineering_process/physics_paths.jpeg", "alt": "The motion keyframes created by the physics collision simulation" })
-    <section class="content">
-        <p class="imagecaption">The motion keyframes created by the physics collision simulation</p>
-    </section>
-    @@include('templates/_srcset.html',{ "class":"fullwidth", "path": "the_engineering_process/animating_the_plane.jpeg", "alt": "Designing the path of the plane" })
-    <section class="content">
-        <p class="imagecaption">Designing the path of the plane</p>
-    </section>
-</body>
+{{n.image("fullwidth","the_engineering_process/physics_paths.jpeg","The motion keyframes created by the physics collision simulation")}}
+
+
+<section class="content">
+    <p class="imagecaption">The motion keyframes created by the physics collision simulation</p>
+</section>
+
+
+{{n.image("fullwidth","the_engineering_process/animating_the_plane.jpeg","Designing the path of the plane")}}
+
+<section class="content">
+    <p class="imagecaption">Designing the path of the plane</p>
+</section>
+{% endblock %}

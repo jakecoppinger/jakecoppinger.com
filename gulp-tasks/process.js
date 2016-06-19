@@ -8,46 +8,52 @@ var imageResize = require('gulp-image-resize');
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
-var markdown = require('markdown');
+//var markdown = require('markdown');
 var pipes = require('gulp-pipes');
 var sourcemaps = require('gulp-sourcemaps');
 var concatCss = require('gulp-concat-css');
 var concat = require('gulp-concat');
-var nunjucksRender = require('gulp-nunjucks-render');
+var nunjucksRender = require('gulp-nunjucks-with-env'); //require('gulp-nunjucks-render');
+var markdown = require('nunjucks-markdown');
+var marked = require('marked');
 
 
 var source = "source/";
 var build = "dist/"
 var scssSource = source + "scss/**/*.scss";
 
-// HTML Templating
 gulp.task('html', function() {
-    return gulp.src('source/**/*.tpl.html')
-        .pipe(fileinclude({
-            basepath: source,
-            filters: {
-                markdown: markdown.parse
-            }
-        }))
-        .pipe(rename({
-            extname: ""
-        }))
-        .pipe(rename({
-            extname: ".html"
-        }))
+    var env = nunjucksRender.nunjucks.configure([source + '/templates']);
+    var renderer = new marked.Renderer();
+
+    // Don't add IDs to header elements
+    renderer.heading = function(text, level) {
+        return '<h' + level + '>' + text + '</h' + level + '>';
+    };
+
+    marked.setOptions({
+        renderer: renderer,
+        // headerPrefix: 'md-',
+        // gfm: true,
+        // tables: true,
+        // breaks: false,
+        // pendantic: false,
+        // sanitize: true,
+        // smartLists: true,
+        smartypants: false
+    });
+
+    markdown.register(env, marked);
+
+    // Gets .html and .nunjucks files in pages
+    return gulp.src([source + 'pages/index.html',
+            source + 'pages/swirlesque.html',
+            source + 'pages/the_engineering_process.html'
+        ])
+        // Renders template with nunjucks
+        .pipe(nunjucksRender(env))
+        // output files in app folder
         .pipe(gulp.dest(source))
-});
-
-
-gulp.task('nunjucks', function() {
-  // Gets .html and .nunjucks files in pages
-  return gulp.src([source + 'pages/index.html',source + 'pages/swirlesque.html'])
-  // Renders template with nunjucks
-  .pipe(nunjucksRender({
-      path: [source + '/templates']
-    }))
-  // output files in app folder
-  .pipe(gulp.dest(source))
 });
 
 // Sass
