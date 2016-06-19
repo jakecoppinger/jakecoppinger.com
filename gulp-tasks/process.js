@@ -12,6 +12,7 @@ var markdown = require('markdown');
 var pipes = require('gulp-pipes');
 var sourcemaps = require('gulp-sourcemaps');
 var concatCss = require('gulp-concat-css');
+var concat = require('gulp-concat');
 
 var source = "source/";
 var build = "dist/"
@@ -52,25 +53,47 @@ gulp.task('sass', function() {
             cascade: false
         }))
         .pipe(cleanCSS({ debug: true }, function(details) {
-            console.log("<< " + details.name + ': ' + (details.stats.originalSize/1024).toFixed(2) + "kb");
-            console.log(">> " + details.name + ': ' + (details.stats.minifiedSize/1024).toFixed(2) + "kb");
+            console.log("<< " + details.name + ': ' + (details.stats.originalSize / 1024).toFixed(2) + "kb");
+            console.log(">> " + details.name + ': ' + (details.stats.minifiedSize / 1024).toFixed(2) + "kb");
         }))
         .pipe(sourcemaps.write())
         .pipe(sourcemaps.init())
         .pipe(concatCss("style.min.css"))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(source + "css"))     
+        .pipe(gulp.dest(source + "css"))
 });
 
 // JavaScript
 var jsFiles = source + "js/**/*.js";
 var jsDest = build + "js";
 
-gulp.task('js', function() {
-    return gulp.src(jsFiles)
-        .pipe(gulp.dest(jsDest))
+gulp.task('uglifyjs', function() {
+    return gulp.src([
+            source + 'js/*.js'
+        ])
+        .pipe(sourcemaps.init())
         .pipe(uglify())
-        .pipe(gulp.dest(jsDest));
+        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.init())
+        .pipe(rename({
+            extname: ""
+        }))
+        .pipe(rename({
+            extname: ".min.js"
+        }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(source + "js"));
+});
+
+gulp.task('concatjs', function() {
+    return gulp.src([
+            source + '*.min.js',
+            source + 'js/components/jquery/dist/jquery.min.js'
+        ])
+        .pipe(sourcemaps.init())
+        .pipe(concat('scripts.min.js'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(source + "js"));
 });
 
 var resizeImageTasks = [];

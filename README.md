@@ -5,9 +5,9 @@ JakeCoppinger.com
 
 ## Setting up
 
-`
-npm install
-`
+`npm install `
+`bower install`
+
 ### Ububtu
 `
 apt-get install imagemagick
