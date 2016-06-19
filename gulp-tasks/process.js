@@ -10,6 +10,7 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var markdown = require('markdown');
 var pipes = require('gulp-pipes');
+var sourcemaps = require('gulp-sourcemaps');
 
 var source = "source/";
 var build = "dist/"
@@ -42,6 +43,7 @@ gulp.task('sass', function() {
         .pipe(fileinclude({
             basepath: source + 'scss/templates/'
         }))
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('.tmp/scss'))
         .pipe(autoprefixer({
@@ -52,6 +54,7 @@ gulp.task('sass', function() {
             console.log(details.name + ': ' + details.stats.originalSize);
             console.log(details.name + ': ' + details.stats.minifiedSize);
         }))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(source + "css"))
         
 });
