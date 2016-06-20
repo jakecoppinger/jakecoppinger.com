@@ -1,0 +1,70 @@
+{% extends "base.njk" %} {% block title %}Transit in Sydney{% endblock %} {% block description %}Departing.io is a web application designed to answer one question and answer it well: when will the next bus come?{% endblock %} {% block body %}
+<section class="header ">
+    <h1><a href="/">Jake Coppinger&nbsp;/</a> Transit in Sydney</h1>
+</section>
+
+{{ n.youtube("w8O1W_ewxx8")}}
+
+<section class="content">
+<h1>The Poster</h1>
+</section>
+
+{{ n.image('shadow','transit_in_sydney/jake_coppinger_travel_to_work.jpeg','Travel to Work poster' )}}
+
+<section class="content">
+<h1>The Visualisation</h1>
+</section>
+
+<a href="https://jakecoppinger.github.io/transit-in-sydney/"> 
+{{ n.image('','transit_in_sydney/visualisation_blanket.jpeg','The visualisation in action' )}}</a>
+
+<section class="content">
+
+{% markdown %}
+Transit in Sydney is a project consisting of a double A2 poster infographic, an interactive visualisation and a film detailing the transport modes in Sydney across different transit modes.
+
+# Poster
+I was quickly drawn to the Transport in Sydney dataset from the City of Sydney open source dataset. Though I begun my journey in Canberra I was always fascinated by the railway maps of Melbourne and Sydney and how they symbolically abstracted the complexity of large networks through design and typography.
+
+As a computer science student my first instinct was to write a Python program to digest the data so that I could manipulate the multiple dimensions with ease. I discovered interesting relationships between the Walking, Bus, Train and Car modes in different Sydney suburbs and I decided tell the story of these changes with respect to geographical distance from the CBD.
+
+I admire the Swiss International Typographical style for how it timelessly communicates focus and objectivity in complex data. I chose to use the Akzidenz-Grotesk typeface by Berthold as I find it flows well in heavier weights and is very geometric, complementing the poster shapes.
+
+Using the transport network map schematic technique of separating categories using colour, I chose four colours that make up a tetrad colour scheme. I chose them to not only work harmoniously together but also with the resulting colours when blended together. By ordering the suburbs by distance (measured with Google maps) I could visualise how their percentage of transport mode changed vertically, represented by the network chart of flowing lines rushing from left to right across the visual and conceptual bridge between the posters, then named and consolidated in a table format.
+
+# Visualisation
+{% endmarkdown %}
+</section>
+{{ n.image('','transit_in_sydney/visualisation_initial_sketch.jpeg','Initial sketches of the visualisation' )}}</a>
+<section class="content">
+{% markdown %}
+
+I chose to use the JavaScript library p5.js to visualise the dataset. This gave me the freedom to use ever-improving web development tools and the chance for my visualisation to reach the widest possible audience through the web.
+
+While I have undertaken major projects in JavaScript before ([departing.io](http://www.departing.io)) I learned a great deal throughout the project. Applying design principles to code was a challenging task but I believe I succeeded. Managing a JavaScript codebase of roughly 1000 lines along with nearly 100 lines of Python code to process the raw data was a technical challenge in itself - I made use of Git for source code management which also gave me the opportunity to visualise my progress of creating the project itself.
+
+In the open source spirit of the dataset and Processing itself I have released my work as open-source on GitHub ([https://github.com/jakecoppinger/transit-in-sydney](https://github.com/jakecoppinger/transit-in-sydney)) - allowing others to utilise and build upon my work.
+
+# Film
+{% endmarkdown %}
+</section>
+{{ n.image('','transit_in_sydney/editing_behind_the_scenes.jpeg','Editing the film' )}}</a>
+<section class="content">
+{% markdown %}
+The day I finished my script I found after looking at the forecast that it would be raining for the next two weeks. The moment I woke up I didn’t see rain, and without breakfast I decided to grab my my camera bag and borrowed tripod and head to the city.
+
+I filled 32gb of SD cards that day using the MagicLantern firmware and Technicolor CineStyle profile (for better dynamic range) before the rain poured. I focused on timelapses of different modes of transport to emphasize the complex nature of networks.
+
+Using a borrowed Rode microphone I recorded my narration and spliced the takes using Logic Pro. I applied a noise gate, EQ and compression before exporting 24 bit @ 48kHz for the highest quality. My friend that creates music under the name [2two1](2two1.net) produced the soundtrack and gave me permission to feature it.
+
+I spent many days and nights in the iterative editing process. I graded my final edit using Fuji 3513 and Deluts “Armchair” film lookup tables (LUTs) to get the exact film look I wanted. Two 3 hour 27 minute renders later (I didn’t like some kerning after the first render) I uploaded to YouTube and shared to all my networks.
+
+I learned a great deal about guerrilla filmmaking in the Sydney CBD and enjoyed the opportunity to improve my narrative skills.
+
+
+{% endmarkdown %}
+
+
+</section>
+
+{% endblock %}
