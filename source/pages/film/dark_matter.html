@@ -1,10 +1,2 @@
-{% extends "film.njk" %}
-
-{% block filmtitle %}{{films[0].title}}{% endblock %}
-{% block filmtitle2 %}{{films[0].title}}{% endblock %}
-
-{% block embed %}{{ n.youtube(films[1].id)}}{% endblock %}
-
-
-{% block description %}{{films[0].description}}{% endblock %}
-
+ {% import 'macros/macros.njk' as n %}
+ {{ n.film(films[0].title,films[0].videoid, films[0].description)}}
