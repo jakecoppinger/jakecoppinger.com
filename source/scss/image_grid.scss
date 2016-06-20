@@ -36,6 +36,12 @@
             cursor: pointer;
         }
         a {
+
+            &:hover {
+                
+            border-bottom: none;
+
+            }
             &:hover {
                 div {
                     opacity: 1;
