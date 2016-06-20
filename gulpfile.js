@@ -33,8 +33,9 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('serve', function(callback) {
+    //'resizeimages',
     runSequence(
-        ['resizeimages', 'uglifyjs', 'html', 'sass'], ['concatjs'], ['browserSync'],
+        [ 'uglifyjs', 'html', 'sass'], ['concatjs'], ['browserSync'],
         callback);
 
     gulp.watch(scssSource, ['pipesass']);

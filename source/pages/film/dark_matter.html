@@ -1,10 +1,10 @@
 {% extends "film.njk" %}
 
-{% block filmtitle %}{{films[0].title}}{% endblock %}
-{% block filmtitle2 %}{{films[0].title}}{% endblock %}
-
-{% block embed %}{{ n.youtube(films[1].id)}}{% endblock %}
 
 
-{% block description %}{{films[0].description}}{% endblock %}
 
+{% set title = films[0].title %}
+{% set videoid = films[0].videoid %}
+{% set description = films[0].description %}
+
+{% set credits = films[0].credits %}
