@@ -1,10 +1,3 @@
 {% extends "film.njk" %}
-
-
-
-
-{% set title = films[0].title %}
-{% set videoid = films[0].videoid %}
-{% set description = films[0].description %}
-
-{% set credits = films[0].credits %}
+{% set title = "Dark Matter" %}
+{% set film = films[title] %}

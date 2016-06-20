@@ -1,9 +1,12 @@
 {
-    "films": [{
+    "films": {
+
+        "Dark Matter": {
             "title": "Dark Matter",
             "videoid": "rkobPOfwiZw",
             "description": "An unofficial music video for the song \"Dark Matter\" by Andrew Belle",
-            "credits":"dark_matter.md"
-            }
-        ]
+            "credits": "dark_matter.md"
+        }
+
     }
+}

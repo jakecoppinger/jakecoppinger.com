@@ -3,7 +3,7 @@
 {% block title %}{{title}}{% endblock %} 
 
 {% block description %}
-{{description}}
+{{film.description}}
 {% endblock %}
 
 {% block body %}
@@ -13,13 +13,13 @@
     </section>
 
     <section class="content filmpage">
-
+    <h1>{{self}}</h1>
         <section class="film">
-        {{ n.youtube(videoid) }}
+        {{ n.youtube(film.videoid) }}
         </section>
 
         <section class="credits">
-            {% markdown 'markdown/' + credits %}
+            {% markdown 'markdown/' + film.credits %}
         </section>
 
     </section>
