@@ -35,11 +35,12 @@
         </tr>
     </table>
     <ul class="image-grid">
+
         {% for title in images %}
-            {% if (titleToFilename in filmsWithDedicatedPage) %}
-                {% set filenameHTML = "/film/" + title | titleToFilename  + ".html" %}
-            {% else %}
+            {% if title in filmsWithDedicatedPage %}
                 {% set filenameHTML = "/" + title | titleToFilename  + ".html" %}
+            {% else %}
+                {% set filenameHTML = "/film/" + title | titleToFilename  + ".html" %}
             {% endif %}
 
             {% set filenameJPEG = title | titleToFilename + ".jpeg" %}
