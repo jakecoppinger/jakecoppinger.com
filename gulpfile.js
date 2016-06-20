@@ -4,7 +4,7 @@ var browserSync = require('browser-sync').create();
 var del = require('del');
 var runSequence = require('run-sequence');
 var merge = require('merge-stream');
-//var size = require('gulp-size');
+var size = require('gulp-size');
 
 var reload = browserSync.reload;
 
@@ -58,6 +58,13 @@ gulp.task('build', ['clean'], function(callback) {
         ['images', 'uglifyjs', 'html', 'sass'], ['concatjs'], ['copy'],
         callback);
 });
+
+gulp.task('minimal-build', ['clean'], function(callback) {
+    runSequence(
+        ['uglifyjs', 'html', 'sass'], ['concatjs'], ['copy'],
+        callback);
+});
+
 
 gulp.task('copy', function() {
     var html = gulp.src([
