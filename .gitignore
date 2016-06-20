@@ -5,8 +5,12 @@
 dist/
 node_modules/
 .tmp/
+
+
+source/film
 source/pages/film/
 source/pages/film/dummy.json
+
 
 # Ignore bower components 
 source/js/components

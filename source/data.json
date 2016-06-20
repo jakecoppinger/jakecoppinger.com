@@ -3,10 +3,17 @@
 
         "Dark Matter": {
             "title": "Dark Matter",
-            "videoid": "rkobPOfwiZw",
+            "id": "rkobPOfwiZw",
             "description": "An unofficial music video for the song \"Dark Matter\" by Andrew Belle",
             "credits": "dark_matter.md"
+        },
+        "Self": {
+            "title": "Self",
+            "id":"KEjGhhgPjm8",
+            "description": "An outsider without identity struggles to see their own place in a world where they're different. A short film on identity and the ever present subject of social media in our lives.",
+            "credits": "self.md"
         }
+
 
     }
 }
