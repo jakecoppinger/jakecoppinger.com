@@ -97,7 +97,7 @@ gulp.task('copy', function() {
         source + 'js/scripts.min.js'
     ], {
         dot: true
-    }).pipe(gulp.dest(build + 'css/'));
+    }).pipe(gulp.dest(build + 'js/'));
 
     return merge(images, html, fonts, sass)
         .pipe(size({
