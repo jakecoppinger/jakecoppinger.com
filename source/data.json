@@ -38,11 +38,14 @@
         }
     },
     "images": [
+        "Transit in Sydney",
+        "The Engineering Process",
         "Dark Matter",
         "Begin EP Album Trailer",
-        "Self", "Wake Up",
+        "Self",
+        "Wake Up",
         "How to achieve a Film Look",
-        "Begin EP Album Trailer",
         "Gungahlin College Media"
-    ]
+    ],
+    "filmsWithDedicatedPage": ["Transit In Sydney", "The Engineering Process"]
 }
