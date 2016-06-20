@@ -15,7 +15,7 @@ var scssSource = source + "scss/**/*.scss"
 require('require-dir')('./gulp-tasks');
 
 gulp.task('pipesass', ['sass'], function() {
-    return gulp.src(source + 'css/scripts.min.css')
+    return gulp.src(source + 'css/style.min.css')
         .pipe(browserSync.reload({
             stream: true
         }))
