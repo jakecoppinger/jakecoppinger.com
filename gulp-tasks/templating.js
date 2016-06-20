@@ -33,12 +33,13 @@ gulp.task('html', ['createFilmTemplates'], function() {
     markdown.register(env, marked);
 
     // Gets .html and .nunjucks files in pages
-    return gulp.src([source + 'pages/**/*.html'])
+    var stream = gulp.src([source + 'pages/**/*.html'])
         // Renders template with nunjucks
         .pipe(data(function() {
             return require('../source/data.json')
         }))
         .pipe(nunjucksRender(env))
         // output files in app folder
-        .pipe(gulp.dest(source))
+        .pipe(gulp.dest(source));
+        return stream;
 });
