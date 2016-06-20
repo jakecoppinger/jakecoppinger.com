@@ -14,7 +14,7 @@ function titleToFilename(title) {
 }
 
 gulp.task('cleanFilm', function() {
-    return del('source/pages/film/*');
+    del.sync('source/pages/film/*');
 });
 
 gulp.task("createFilmTemplates", ['cleanFilm'], function() {

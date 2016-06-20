@@ -20,14 +20,13 @@ gulp.task('html', ['createFilmTemplates'], function() {
 
     marked.setOptions({
         renderer: renderer,
-        // headerPrefix: 'md-',
-        // gfm: true,
+        gfm: true,
         // tables: true,
-        // breaks: false,
+        breaks: true,
         // pendantic: false,
         // sanitize: true,
         // smartLists: true,
-        smartypants: false
+        smartypants: true
     });
 
     markdown.register(env, marked);
@@ -41,5 +40,5 @@ gulp.task('html', ['createFilmTemplates'], function() {
         .pipe(nunjucksRender(env))
         // output files in app folder
         .pipe(gulp.dest(source));
-        return stream;
+    return stream;
 });
