@@ -34,5 +34,20 @@
             <td>ReelACT 2013</td>
         </tr>
     </table>
+    <ul class="image-grid">
+        {% for title in images %}
+        {% set filenameHTML = title | titleToFilename  + ".html" %}
+        {% set filenameJPEG = title | titleToFilename + ".jpeg" %}
+        {% set imageURL = title | titleToFilename + "/" + filenameJPEG %}
+        <li>
+        <a href="/film/{{filenameHTML}}">
+            {{n.image("",imageURL, films[title].description)}}
+            <div>
+                <h3>{{title}}</h3>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
 </section>
 {% endblock %}

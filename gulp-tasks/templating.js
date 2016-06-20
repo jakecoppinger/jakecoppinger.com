@@ -11,6 +11,13 @@ var scssSource = source + "scss/**/*.scss";
 
 gulp.task('html', ['createFilmTemplates'], function() {
     var env = nunjucksRender.nunjucks.configure([source + '/templates']);
+
+    env.addFilter('titleToFilename', function(title) {
+        var newTitle = title.toLowerCase().split(' ').join('_')
+        return newTitle;
+    });
+
+
     var renderer = new marked.Renderer();
 
     // Don't add IDs to header elements
