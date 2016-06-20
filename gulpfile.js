@@ -4,7 +4,7 @@ var browserSync = require('browser-sync').create();
 var del = require('del');
 var runSequence = require('run-sequence');
 var merge = require('merge-stream');
-var size = require('gulp-size');
+//var size = require('gulp-size');
 
 var reload = browserSync.reload;
 

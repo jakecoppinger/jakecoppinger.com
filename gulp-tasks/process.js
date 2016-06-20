@@ -4,7 +4,7 @@ var fileinclude = require('gulp-file-include');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var changed = require('gulp-changed');
-var imageResize = require('gulp-image-resize');
+
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
@@ -72,23 +72,3 @@ gulp.task('concatjs', function() {
         .pipe(concat('scripts.min.js'))
         .pipe(gulp.dest(source + "js"));
 });
-
-var resizeImageTasks = [];
-[1920, 1200, 720].forEach(function(size) {
-    var output = source + 'images/' + size + '/';
-    var resizeImageTask = 'resize_' + size;
-    gulp.task(resizeImageTask, function() {
-        return gulp.src(source + 'original_images/**/*.{jpg,png,tiff}')
-            .pipe(imageResize({
-                format: 'jpeg',
-                width: size,
-                quality: 0.9,
-                upscale: false
-            }))
-            //.pipe(pipes.image.optimize())
-            .pipe(gulp.dest(output))
-    });
-    resizeImageTasks.push(resizeImageTask);
-});
-
-gulp.task('images', resizeImageTasks);
