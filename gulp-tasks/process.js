@@ -17,11 +17,31 @@ var nunjucksRender = require('gulp-nunjucks-with-env'); //require('gulp-nunjucks
 var markdown = require('nunjucks-markdown');
 var marked = require('marked');
 var data = require('gulp-data');
+var foreach = require("gulp-foreach");
+var file = require("gulp-file");
 
 
 var source = "source/";
 var build = "dist/"
 var scssSource = source + "scss/**/*.scss";
+
+var films = [{"title": "Dark Matter"}];
+
+
+gulp.task("generateFilmTemplates", function() {   
+    return gulp.src("source/dummy.json")
+    .pipe(foreach(function(stream, f){
+        films.forEach(function(film){
+            stream
+                .pipe(file(film.title + ".html", '{% extends "film.njk" %}{% set title = "' + film.title + '" %}{% set film = films[title] %}))'))
+                .pipe(gulp.dest("source/pages/film"));
+        });
+        return stream;
+    }))
+    // .pipe(addsrc(["source/pages/film"]))
+    // .pipe(gulp.dest("./app"));
+});
+
 
 gulp.task('html', function() {
     var env = nunjucksRender.nunjucks.configure([source + '/templates']);
