@@ -31,16 +31,13 @@
             border-bottom: none;
             box-shadow: none;
             text-decoration: none;
-            display: block;
-            width: 100%;
+            display: table; // This was block
+            width: 100%; // This can fix bugs: 99%;
             cursor: pointer;
         }
         a {
-
             &:hover {
-                
-            border-bottom: none;
-
+                border-bottom: none;
             }
             &:hover {
                 div {
