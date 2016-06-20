@@ -35,7 +35,7 @@ gulp.task('browserSync', function() {
 gulp.task('serve', function(callback) {
     //'resizeimages',
     runSequence(
-        [ 'uglifyjs', 'html', 'sass'], ['concatjs'], ['browserSync'],
+        ['uglifyjs', 'html', 'sass'], ['concatjs'], ['browserSync'],
         callback);
 
     gulp.watch(scssSource, ['pipesass']);
@@ -55,12 +55,12 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('build', ['clean'], function(callback) {
     runSequence(
-        ['js', 'html', 'sass', 'resizeimages'], ['copy'],
+        ['images', 'uglifyjs', 'html', 'sass'], ['concatjs'], ['copy'],
         callback);
 });
 
 gulp.task('copy', function() {
-    var app = gulp.src([
+    var html = gulp.src([
         source + '**/*.html',
         '!' + source + '**/*.tpl.html'
         // We don't want to copy templates
@@ -74,12 +74,6 @@ gulp.task('copy', function() {
         dot: true
     }).pipe(gulp.dest(build + 'fonts/'));
 
-    var bower = gulp.src([
-        source + 'components/**/*.*'
-    ], {
-        dot: true
-    }).pipe(gulp.dest(build + 'components/'));
-
     var images = gulp.src([
         source + 'images/**/*.*'
     ], {
@@ -87,13 +81,18 @@ gulp.task('copy', function() {
     }).pipe(gulp.dest(build + 'images/'));
 
     var sass = gulp.src([
-        source + 'css/**/*.*'
+        source + 'css/style.min.css'
     ], {
         dot: true
     }).pipe(gulp.dest(build + 'css/'));
 
+    var js = gulp.src([
+        source + 'js/scripts.min.js'
+    ], {
+        dot: true
+    }).pipe(gulp.dest(build + 'css/'));
 
-    return merge(images, app, fonts, bower, sass)
+    return merge(images, html, fonts, sass)
         .pipe(size({
             title: 'copy'
         }));

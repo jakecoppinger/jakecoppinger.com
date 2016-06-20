@@ -91,4 +91,4 @@ var resizeImageTasks = [];
     resizeImageTasks.push(resizeImageTask);
 });
 
-gulp.task('resizeimages', resizeImageTasks);
+gulp.task('images', resizeImageTasks);
