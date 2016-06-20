@@ -3,18 +3,39 @@ JakeCoppinger.com
 
 **In active development**
 
-## Setting up
+# Setting up
+
+Make sure Node and NPM are installed
+`
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+`
+
 Install dependencies with NPM. This will take a while depending on your internet connection.
 
-`npm install `
+`npm install`
+
+### Install bower
+
+Make sure bower is installed
+`sudo npm install -g bower`
+
+You may need to install legacy node for Bower to work:
+`sudo apt-get install nodejs-legacy`
+
+Install Bower dependencies
 `bower install`
 
-### Ububtu
+### Install gulp
+
+`sudo npm install --global gulp-cli`
+
+## Ububtu
 `
-apt-get install imagemagick
-apt-get install graphicsmagick
+sudo apt-get install imagemagick graphicsmagick
 `
-### Mac OS X (using Homebrew):
+## Mac OS X (using Homebrew):
 `
 brew install imagemagick
 brew install graphicsmagick
