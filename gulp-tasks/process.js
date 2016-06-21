@@ -35,8 +35,9 @@ gulp.task('sass', function() {
             cascade: false
         }))
         .pipe(cleanCSS({ debug: true }, function(details) {
-            console.log("<< " + details.name + ': ' + (details.stats.originalSize / 1024).toFixed(2) + "kb");
-            console.log(">> " + details.name + ': ' + (details.stats.minifiedSize / 1024).toFixed(2) + "kb");
+            var originalSize = (details.stats.originalSize / 1024).toFixed(2)
+            var compressedSize = (details.stats.minifiedSize / 1024).toFixed(2)
+            console.log(details.name + " original: " + originalSize + "kb, compressed: " + compressedSize + "kb, ratio: " + (compressedSize / originalSize * 100).toFixed(1) + "%");
         }))
         .pipe(sourcemaps.write())
         .pipe(sourcemaps.init())
