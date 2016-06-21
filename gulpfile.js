@@ -35,7 +35,7 @@ gulp.task('browserSync', function() {
 gulp.task('serve', function(callback) {
     //'resizeimages',
     runSequence(
-        ['uglifyjs', 'html', 'sass'], ['concatjs'], ['browserSync'],
+        ['js', 'html', 'sass'], ['browserSync'],
         callback);
 
     gulp.watch(scssSource, ['pipesass']);
@@ -48,20 +48,23 @@ gulp.task('serve', function(callback) {
         source + 'data.json'
     ], ['html', reload]);
 
-    gulp.watch(source + 'js/*.js', ['uglifyjs', 'concatjs']);
+    gulp.watch([
+        source + 'js/*.js',
+        '!' + source + 'js/*.min.js'
+        ], ['js']);
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('build', ['clean'], function(callback) {
     runSequence(
-        ['images', 'uglifyjs', 'html', 'sass'], ['concatjs'], ['copy'],
+        ['images', 'js', 'html', 'sass'], ['copy'],
         callback);
 });
 
 gulp.task('minimal-build', ['clean'], function(callback) {
     runSequence(
-        ['uglifyjs', 'html', 'sass'], ['concatjs'], ['copy'],
+        ['js', 'html', 'sass'], ['concatjs'], ['copy'],
         callback);
 });
 

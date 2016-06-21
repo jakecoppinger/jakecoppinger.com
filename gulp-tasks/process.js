@@ -37,7 +37,7 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.write())
         .pipe(sourcemaps.init())
         .pipe(concatCss("style.min.css"))
-                .pipe(cleanCSS({ debug: true }, function(details) {
+        .pipe(cleanCSS({ debug: true }, function(details) {
             var originalSize = (details.stats.originalSize / 1024).toFixed(2)
             var compressedSize = (details.stats.minifiedSize / 1024).toFixed(2)
             console.log(details.name + " original: " + originalSize + "kb, compressed: " + compressedSize + "kb, ratio: " + (compressedSize / originalSize * 100).toFixed(1) + "%");
@@ -47,29 +47,13 @@ gulp.task('sass', function() {
 });
 
 // JavaScript
-gulp.task('uglifyjs', function() {
-    return gulp.src([
-            source + 'js/*.js',
-            "!" + source + 'js/*.min.js'
-        ])
-        .pipe(sourcemaps.init())
-        .pipe(uglify())
-        .pipe(sourcemaps.write())
-        .pipe(rename({
-            extname: ""
-        }))
-        .pipe(rename({
-            extname: ".min.js"
-        }))
-        .pipe(gulp.dest(source + "js"));
-});
-
-gulp.task('concatjs', function() {
+gulp.task('js', function() {
     return gulp.src([
             source + 'js/components/jquery/dist/jquery.min.js',
-            source + 'js/*.min.js',
-            '!' + source + 'js/scripts.min.js'
+            source + 'js/*.js',
+            '!' + source + 'js/*.min.js'
         ])
         .pipe(concat('scripts.min.js'))
+        .pipe(uglify())
         .pipe(gulp.dest(source + "js"));
 });
