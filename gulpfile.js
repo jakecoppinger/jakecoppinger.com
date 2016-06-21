@@ -70,7 +70,7 @@ gulp.task('copy', function() {
     var html = gulp.src([
         source + '**/*.html',
         '!' + source + '**/*.tpl.html'
-        // We don't want to copy templates
+        // We don't want to copy templates, only compiled HTML
     ], {
         dot: true
     }).pipe(gulp.dest(build));
@@ -99,7 +99,13 @@ gulp.task('copy', function() {
         dot: true
     }).pipe(gulp.dest(build + 'js/'));
 
-    return merge(images, html, fonts, sass)
+    var robots = gulp.src([
+        source + 'robots.txt'
+    ], {
+        dot: true
+    }).pipe(gulp.dest(build));
+
+    return merge(images, html, fonts, sass, robots)
         .pipe(size({
             title: 'copy'
         }));
