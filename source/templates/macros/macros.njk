@@ -1,14 +1,10 @@
 {% macro image(class, path, alt) %}
 
-
 <img class="{{class}}" srcset="/images/720/{{path}} 720w, /images/1100/{{path}} 1100w, /images/1920/{{path}} 1920w" alt="{{alt}}">
 {% endmacro %}
-
 
 {% macro youtube(code) %}
 <div class="video_embed widescreen b">
     <iframe src="http://www.youtube.com/embed/{{code}}?hd=1&theme=light&rel=0&color=white&showinfo=0" frameborder="0" allowfullscreen></iframe>
 </div>
-{% endmacro %} 
-
-
+{% endmacro %}
