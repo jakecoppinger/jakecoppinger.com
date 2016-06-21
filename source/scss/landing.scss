@@ -24,12 +24,16 @@
         font-size: calc(1.5em + (5vw * 0.5));
     }
     h3 {
+        font-family: akzidenz-grotesk_pro_medium;
+        font-weight: 400;
         text-align: center;
         margin: 0 auto;
+        margin-bottom: 1em;
         max-width: 25em;
     }
     ul {
-        padding:0;
+        padding: 0;
+        padding-top: 0.3em;
         list-style: none;
         font-size: calc(1.3em + (1vw * 0.5));
         a {
@@ -43,6 +47,7 @@
     }
     li {
         text-decoration: none;
+        margin-top: calc(1.5em - 3vh);
     }
 }
 

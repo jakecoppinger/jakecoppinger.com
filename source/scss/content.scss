@@ -3,7 +3,6 @@ section.content {
     margin-right: auto;
     width: 90vw;
     max-width: 50em;
-
     font-family: akzidenz-grotesk_pro_regular;
     font-weight: 300;
     &.filmpage {
@@ -11,6 +10,16 @@ section.content {
     }
     h1,
     h2 {
+        white-space: pre-wrap;
+        /* css-3 */
+        white-space: -moz-pre-wrap;
+        /* Mozilla, since 1999 */
+        white-space: -pre-wrap;
+        /* Opera 4-6 */
+        white-space: -o-pre-wrap;
+        /* Opera 7 */
+        word-wrap: break-word;
+        /* Internet Explorer 5.5+ */
         line-height: 1.2;
         color: #525252;
         line-height: 1em;

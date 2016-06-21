@@ -6,7 +6,7 @@
 
 [**Departing.io**](http://www.departing.io) - A web app for real time bus ACTION bus arrivals in Canberra, Australia. I developed this web app through year 12 as part of my media studies, and later released it as open source under the GPL license.
 
-# [github.com/jakecoppinger/departing.io](https://github.com/jakecoppinger/departing.io)
+## [github.com/jakecoppinger/departing.io](https://github.com/jakecoppinger/departing.io)
 
 
 Try it on your smartphone at [departing.io](http://www.departing.io)!
