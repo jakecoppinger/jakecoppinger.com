@@ -1,9 +1,9 @@
-JakeCoppinger.com
+[jakecoppinger.com](http://www.jakecoppinger.com)
 =================
 
-**In active development**
+A portfolio website for my code, mechatronics, film, and design projects. A static site built with [Gulp.js](http://www.gulpjs.com/) for automated Sass, JS and image optimisation (among other cool things), [Nunjucks](https://mozilla.github.io/nunjucks/) for templating and Markdown for body text.
 
-# Setting up
+# Setting up development environment
 
 Make sure Node and NPM are installed
 `
@@ -58,3 +58,6 @@ Spin up [Browsersync.io](https://www.browsersync.io) and compile all the things.
 `
 gulp build
 `
+
+# Author
+Design and development by Jake Coppinger, 2016.
