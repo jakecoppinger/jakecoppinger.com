@@ -1,0 +1,15 @@
+ {% import 'macros/macros.njk' as n %}
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %} - Jake Coppinger</title>
+        <meta name="description" content="{% block description %}{% endblock %}"/>
+        {% include "partials/imports.njk" %}
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+        {% include "partials/scripts.njk" %}
+    </body>
+</html>
