@@ -4,6 +4,8 @@ var nunjucksRender = require('gulp-nunjucks-with-env');
 var markdown = require('nunjucks-markdown');
 var marked = require('marked');
 var data = require('gulp-data');
+var htmlmin = require('gulp-htmlmin');
+
 var environments = require('gulp-environments');
 var development = environments.development;
 var production = environments.production;
@@ -52,6 +54,12 @@ gulp.task('html', ['createFilmTemplates'], function() {
             return envData;
         }))
         .pipe(nunjucksRender(env))
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            removeComments: true,
+            minifyCSS:true,
+            minifyJS:true
+        }))
         // output files in app folder
         .pipe(gulp.dest(source));
     return stream;

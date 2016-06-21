@@ -34,14 +34,14 @@ gulp.task('sass', function() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(cleanCSS({ debug: true }, function(details) {
+        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.init())
+        .pipe(concatCss("style.min.css"))
+                .pipe(cleanCSS({ debug: true }, function(details) {
             var originalSize = (details.stats.originalSize / 1024).toFixed(2)
             var compressedSize = (details.stats.minifiedSize / 1024).toFixed(2)
             console.log(details.name + " original: " + originalSize + "kb, compressed: " + compressedSize + "kb, ratio: " + (compressedSize / originalSize * 100).toFixed(1) + "%");
         }))
-        .pipe(sourcemaps.write())
-        .pipe(sourcemaps.init())
-        .pipe(concatCss("style.min.css"))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(source + "css"))
 });
