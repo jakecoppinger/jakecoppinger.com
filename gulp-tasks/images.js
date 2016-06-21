@@ -7,7 +7,7 @@ var source = "source/";
 var build = "dist/"
 
 var resizeImageTasks = [];
-[1920, 1200, 720].forEach(function(size) {
+[1200].forEach(function(size) { // , 1200, 720]
     var output = source + 'images/' + size + '/';
     var resizeImageTask = 'resize_' + size;
     gulp.task(resizeImageTask, function() {
