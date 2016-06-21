@@ -4,6 +4,9 @@ var nunjucksRender = require('gulp-nunjucks-with-env');
 var markdown = require('nunjucks-markdown');
 var marked = require('marked');
 var data = require('gulp-data');
+var environments = require('gulp-environments');
+var development = environments.development;
+var production = environments.production;
 
 var source = "source/";
 var build = "dist/"
@@ -43,6 +46,10 @@ gulp.task('html', ['createFilmTemplates'], function() {
         // Renders template with nunjucks
         .pipe(data(function() {
             return require('../source/data.json')
+        }))
+        .pipe(data(function() {
+            var envData = production() ? { "environment": "production" } : { "environment": "development" };
+            return envData;
         }))
         .pipe(nunjucksRender(env))
         // output files in app folder
