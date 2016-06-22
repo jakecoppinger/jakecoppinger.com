@@ -2,26 +2,35 @@
     height: 100vh;
 }
 
-// Fixing Firefox bugs
-@-moz-document url-prefix() {}
-
+// Old method of fixing Firefox bugs
+// @-moz-document url-prefix() {}
 #maintitle.no-mix-blend-mode {
     mix-blend-mode: normal !important;
-    color: black !important;
+    color: #3F3F3F !important;
     ul {
         a {
             transition: color 0.25s !important;
             &:hover {
-                color: white !important;
+                color: #D1D1D1 !important;
+            }
+        }
+    }
+    h3 {
+        a {
+            &:hover {
+                color: #9C9C9C;
             }
         }
     }
 }
 
 #maintitle {
+    mix-blend-mode: exclusion;
+    opacity: 1;
+    color: #FFFFFF;
+    font-family: akzidenz-grotesk_pro_regular;
     text-rendering: optimizeLegibility;
     font-smooth: never;
-    mix-blend-mode: exclusion; // fix here
     text-align: center;
     position: relative;
     width: 90%;
@@ -30,10 +39,6 @@
     margin-left: auto;
     margin-right: auto;
     transform: translateY(-50%);
-    font-family: akzidenz-grotesk_pro_regular;
-    color: #FFFFFF; /// fix here
-    // color:black;
-    opacity: 1;
     h1 {
         margin: 0;
         padding: 0;

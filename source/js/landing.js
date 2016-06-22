@@ -6,10 +6,6 @@ $(document).ready(function() {
     }
 
     testMixBlendModeSupport();
-
-
-
-
 });
 
 function is_touch_device() {
@@ -26,14 +22,8 @@ function testMixBlendModeSupport() {
         var support = window.CSS.supports('mix-blend-mode', 'soft-light');
         var tag = support ? 'mix-blend-mode' : 'no-mix-blend-mode';
         $('#maintitle').addClass(tag);
-        if (support) {
-            console.log("Mix blend mode supported\n");
-        } else {
-            console.log("Mix blend mode NOT supported\n");
-        }
     }
 }
-
 
 function attachBackgroundImage(imageName) {
     $("#landingscreen a." + imageName).hover(
