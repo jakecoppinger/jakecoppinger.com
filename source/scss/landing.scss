@@ -2,10 +2,19 @@
     height: 100vh;
 }
 
+// Fixing Firefox bugs
 @-moz-document url-prefix() {
     #maintitle {
         mix-blend-mode: normal !important;
-        color: black !important; /// fix here
+        color: black !important;
+    }
+    ul {
+        a {
+            transition: color 0.25s !important;
+            &:hover {
+                color: white !important;
+            }
+        }
     }
 }
 
