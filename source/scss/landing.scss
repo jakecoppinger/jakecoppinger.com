@@ -3,11 +3,11 @@
 }
 
 // Fixing Firefox bugs
-@-moz-document url-prefix() {
-    #maintitle {
-        mix-blend-mode: normal !important;
-        color: black !important;
-    }
+@-moz-document url-prefix() {}
+
+#maintitle.no-mix-blend-mode {
+    mix-blend-mode: normal !important;
+    color: black !important;
     ul {
         a {
             transition: color 0.25s !important;
