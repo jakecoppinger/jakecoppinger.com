@@ -1,49 +1,53 @@
 {
     "films": {
         "July": {
-            "id": "Ha-Ydkw88OQ",
+            "youtube_id": "Ha-Ydkw88OQ",
+            "vimeo_id":"175077450",
+            "vimeo_human_url":"july",
+            "ultrawidescreen":1,
             "description": "A music video for July performed by Abigail Johnson & Graham McDowell, from their new EP, Six Thirty Five.",
             "year": "2016",
             "credits": "film/july.md"
         },
         "Getting started with Magic Lantern": {
-            "id": "LHzQkJNMIzU",
+            "youtube_id": "LHzQkJNMIzU",
             "description": "Magic Lantern is a free software add on for your Canon DSLR that effectively upgrades its features. This tutorial goes over the Magic Lantern installation, some tips on getting started with the extra features for filmmaking, and some safety tips to make sure it doesn't damage your camera.",
             "year": "2016",
             "credits": "film/getting_started_with_magic_lantern.md"
         },
         "Dark Matter": {
-            "id": "rkobPOfwiZw",
+            "youtube_id": "rkobPOfwiZw",
             "description": "An unofficial music video for the song \"Dark Matter\" by Andrew Belle",
             "year": 2014,
             "credits": "film/dark_matter.md"
         },
         "Self": {
-            "id": "KEjGhhgPjm8",
+            "youtube_id": "KEjGhhgPjm8",
             "description": "An outsider without identity struggles to see their own place in a world where they're different. A short film on identity and the ever present subject of social media in our lives.",
             "year": 2013,
             "credits": "film/self.md"
         },
         "Wake Up": {
-            "id": "YmoLrjvXCUo",
+            "youtube_id": "YmoLrjvXCUo",
             "description": "Wake Up - A short film. Are you really awake?",
             "year": 2014,
             "credits": "film/wake_up.md"
         },
         "How to achieve a Film Look": {
-            "id": "QbBR7IsBbZ8",
+            "youtube_id": "QbBR7IsBbZ8",
             "description": "Beginning to shoot film on your DSLR? This tutorial goes over some practical tips on creating a cinematic look with your DSLR footage. In this video I cover the basic camera settings to achieve a popular style and some effective editing techniques to begin with. Have a read of the comments - some much more qualified people have shared their useful tips!",
             "year": 2014,
             "credits": "film/how_to_achieve_a_film_look.md"
         },
         "Begin EP Album Trailer": {
-            "id": "x5f_4H_fsbQ",
+            "youtube_id": "x5f_4H_fsbQ",
             "description": "Album trailer for 2two1's EP, Begin. A film by Jake Coppinger in collaboration with Callum McLeish-Graham.",
             "year": 2016,
             "credits": "film/begin_ep_album_trailer.md"
         },
         "Gungahlin College Media": {
-            "id": "S1TnGDKDs8E",
+            "youtube_id": "S1TnGDKDs8E",
+            "ultrawidescreen":1,
             "description": "A short advertisement promoting the TV Studio used in the Media course at Gungahlin College, assignment for Year 11 Media.",
             "year": 2013,
             "credits": "film/gungahlin_college_media.md"

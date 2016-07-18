@@ -3,8 +3,15 @@
 <img class="{{class}}" srcset="/images/720/{{path}} 720w, /images/1100/{{path}} 1100w, /images/1920/{{path}} 1920w" alt="{{alt}}">
 {% endmacro %}
 
-{% macro youtube(code) %}
-<div class="video_embed widescreen b">
-    <iframe src="http://www.youtube.com/embed/{{code}}?hd=1&theme=light&rel=0&color=white&showinfo=0" frameborder="0" allowfullscreen></iframe>
+{% macro youtube(id,ultrawidescreen) %}
+<div class="embed-container{% if ultrawidescreen %} ultrawidescreen{% endif %}">
+    <iframe src="http://www.youtube.com/embed/{{code}}?hd=1&theme=light&rel=0&color=white&showinfo=0" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+{% endmacro %}
+
+
+{% macro vimeo(id,ultrawidescreen) %}
+<div class='embed-container{% if ultrawidescreen %} ultrawidescreen{% endif %}'>
+<iframe src='https://player.vimeo.com/video/{{id}}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </div>
 {% endmacro %}
