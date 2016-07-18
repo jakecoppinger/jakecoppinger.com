@@ -9,52 +9,38 @@
     <h1><a href="http://www.youtube.com/c/jakecoppinger">1.8 million YouTube views / 33k subscribers</a></h1>
     <table>
         <tr>
-            <td>Best Film in festival</td>
-            <td>The Engineering Process</td>
+            <td><b>Best Film in festival</b></td>
+            <td><i><a href="/film/the_engineering_process.html">The Engineering Process</a></i></td>
             <td><a href="http://www.gungahlincollegetv.com/featured/">ReelACT 2015</a></td>
         </tr>
         <tr>
-            <td>Best Music Video</td>
-            <td>Dark Matter</td>
+            <td><b>Best Music Video</b></td>
+            <td><i><a href="/film/dark_matter.html">Dark Matter</a></i></td>
             <td><a href="http://www.gungahlincollegetv.com/featured/">ReelACT 2015</a></td>
         </tr>
         <tr>
-            <td>Second Place</td>
-            <td>The Engineering Process</td>
+            <td><b>Second Place</b></td>
+            <td><i><a href="/film/the_engineering_process.html">The Engineering Process</a></i></td>
             <td><a href="http://engflick.com.au/2014/11/27/engineering-film-makers-take-on-the-silver-screen/">EngFlick 2014</a></td>
         </tr>
         <tr>
-            <td>Third place</td>
-            <td>The $18 billion dollar Doughnut</td>
-            <td><a href="http://www.aip.org.au/act/Frame_Your_Physics/styled/index.html">Frame Your Physics 2013</a></td>
-        </tr>
-        <tr>
-            <td>Finalist &amp; screening in cinema</td>
-            <td>Self</td>
+            <td><b>Finalist &amp; screening in cinema</b></td>
+            <td><i><a href="/film/self.html">Self</a></i></td>
             <td>ReelACT 2013</td>
         </tr>
     </table>
-    </section>
-    <section class="content filmpage">
+</section>
+<section class="content filmpage">
     <ul class="image-grid">
-
-        {% for title in images %}
-            {% if title in filmsWithDedicatedPage %}
-                {% set filenameHTML = "/" + title | titleToFilename  + ".html" %}
-            {% else %}
-                {% set filenameHTML = "/film/" + title | titleToFilename  + ".html" %}
-            {% endif %}
-
-            {% set filenameJPEG = title | titleToFilename + ".jpeg" %}
-            {% set imageURL = "films/" + filenameJPEG %}
-            <li>
+        {% for title in images %} {% if title in filmsWithDedicatedPage %} {% set filenameHTML = "/" + title | titleToFilename + ".html" %} {% else %} {% set filenameHTML = "/film/" + title | titleToFilename + ".html" %} {% endif %} {% set filenameJPEG = title | titleToFilename + ".jpeg" %} {% set imageURL = "films/" + filenameJPEG %}
+        <li>
             <a href="{{filenameHTML}}">
                 {{n.image("",imageURL, films[title].description)}}
                 <div>
                     <h3>{{title}}</h3>
                 </div>
                 </a>
-            </li>
+        </li>
         {% endfor %}
     </ul>
 </section>
