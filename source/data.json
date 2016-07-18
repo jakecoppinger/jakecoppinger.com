@@ -1,5 +1,17 @@
 {
     "films": {
+        "July": {
+            "id": "Ha-Ydkw88OQ",
+            "description": "A music video for July performed by Abigail Johnson & Graham McDowell, from their new EP, Six Thirty Five.",
+            "year": "2016",
+            "credits": "film/july.md"
+        },
+        "Getting started with Magic Lantern": {
+            "id": "LHzQkJNMIzU",
+            "description": "Magic Lantern is a free software add on for your Canon DSLR that effectively upgrades its features. This tutorial goes over the Magic Lantern installation, some tips on getting started with the extra features for filmmaking, and some safety tips to make sure it doesn't damage your camera.",
+            "year": "2016",
+            "credits": "film/getting_started_with_magic_lantern.md"
+        },
         "Dark Matter": {
             "id": "rkobPOfwiZw",
             "description": "An unofficial music video for the song \"Dark Matter\" by Andrew Belle",
@@ -38,6 +50,8 @@
         }
     },
     "images": [
+        "July",
+        "Getting started with Magic Lantern",
         "Transit in Sydney",
         "The Engineering Process",
         "Dark Matter",
