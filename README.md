@@ -6,11 +6,10 @@ A portfolio website for my code, mechatronics, film, and design projects. A stat
 # Setting up development environment
 
 Make sure Node and NPM are installed
-`
-sudo apt-get update
-sudo apt-get install nodejs
-sudo apt-get install npm
-`
+
+`sudo apt-get update`
+`sudo apt-get install nodejs`
+`sudo apt-get install npm`
 
 Install dependencies with NPM. This will take a while depending on your internet connection.
 
