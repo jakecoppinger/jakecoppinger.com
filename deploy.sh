@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # Automated builds and pushes to deployment repo
+set -e
+# Any subsequent(*) commands which fail will cause the shell script to exit immediately
+
 id="[Build Script]"
 
 echo $id "Update build dependencies..."
@@ -30,3 +33,6 @@ echo $id "Adding and commiting new files to Git done."
 echo $id "Pushing to master..."
 git push -f origin master
 echo $id "Master push done."
+
+echo $id
+echo $id "Build completed!"
