@@ -5,6 +5,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var merge = require('merge-stream');
 var size = require('gulp-size');
+var hygienist   = require('hygienist-middleware');
 
 var reload = browserSync.reload;
 
@@ -28,7 +29,8 @@ gulp.task('browserSync', function() {
         },
         open: false,
         notify: false,
-        logPrefix: 'JakeCoppinger.com'
+        logPrefix: 'BrowserSync',
+        middleware: hygienist(source)
     })
 })
 
