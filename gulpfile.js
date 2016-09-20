@@ -102,13 +102,14 @@ gulp.task('copy', function() {
         dot: true
     }).pipe(gulp.dest(build + 'js/'));
 
-    var robots = gulp.src([
-        source + 'robots.txt'
+    var robotsAndCNAME = gulp.src([
+        source + 'robots.txt',
+        source + 'CNAME'
     ], {
         dot: true
     }).pipe(gulp.dest(build));
 
-    return merge(images, html, fonts, sass, robots)
+    return merge(images, html, fonts, sass, robotsAndCNAME)
         .pipe(size({
             title: 'copy'
         }));
