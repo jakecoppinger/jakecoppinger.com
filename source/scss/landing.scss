@@ -24,8 +24,15 @@
     }
 }
 
+// Fixes mix-blend-mode bugs in firefox
+@-moz-document url-prefix() {
+    #maintitle {
+        color: #383838 !important;
+    }
+}
+
 #maintitle {
-    mix-blend-mode: exclusion;
+    mix-blend-mode: difference; //exclusion;
     opacity: 1;
     color: #FFFFFF;
     font-family: akzidenz-grotesk_pro_regular;
@@ -57,9 +64,9 @@
             //color: #FFFFFF;
             color: inherit;
             transition: all 0.3s;
-            &:hover {
-                color: #666;
-            }
+            // &:hover {
+            //     color: #666;
+            // }
         }
     }
     ul {
@@ -79,6 +86,10 @@
     li {
         text-decoration: none;
         margin-top: calc(0.2em + 0.4vh);
+        transition: all 0.5s;
+        &:hover {
+            color: white;
+        }
         &.title {
             //font-size: 70%;
             opacity: 0.2;
