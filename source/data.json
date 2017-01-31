@@ -1,18 +1,24 @@
 {
     "films": {
+        "Mountains": {
+            "youtube_id": "sob4tbyQPe8",
+            "description": "I shot this film at various moments when I travelled to Colorado, while still experiencing the adventure to the fullest.",
+            "year": "2017",
+            "credits": "film/mountains.md"
+        },
         "After Hours - A Skateboarding Film": {
             "youtube_id": "lSsUa5e_Fk4",
-            "vimeo_id":"189858601",
-            "vimeo_human_url":"afterhours",
+            "vimeo_id": "189858601",
+            "vimeo_human_url": "afterhours",
             "description": "A few of my friends were heading out skateboarding around Sydney so I joined them with my Canon 60D and Canon 50mm f/1.8 and shot handheld for the night. Great fun! The film is about the mistakes and trips you don't usually see.",
             "year": "2016",
             "credits": "film/after_hours.md"
         },
         "July": {
             "youtube_id": "Ha-Ydkw88OQ",
-            "vimeo_id":"175077450",
-            "vimeo_human_url":"july",
-            "ultrawidescreen":1,
+            "vimeo_id": "175077450",
+            "vimeo_human_url": "july",
+            "ultrawidescreen": 1,
             "description": "A music video for July performed by Abigail Johnson & Graham McDowell, from their new EP, Six Thirty Five.",
             "year": "2016",
             "credits": "film/july.md"
@@ -55,13 +61,14 @@
         },
         "Gungahlin College Media": {
             "youtube_id": "S1TnGDKDs8E",
-            "ultrawidescreen":1,
+            "ultrawidescreen": 1,
             "description": "A short advertisement promoting the TV Studio used in the Media course at Gungahlin College, assignment for Year 11 Media.",
             "year": 2013,
             "credits": "film/gungahlin_college_media.md"
         }
     },
     "images": [
+        "Mountains",
         "After Hours - A Skateboarding Film",
         "July",
         "Getting started with Magic Lantern",
