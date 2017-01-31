@@ -1,5 +1,13 @@
 {
     "films": {
+        "After Hours - A Skateboarding Film": {
+            "youtube_id": "lSsUa5e_Fk4",
+            "vimeo_id":"189858601",
+            "vimeo_human_url":"afterhours",
+            "description": "A few of my friends were heading out skateboarding around Sydney so I joined them with my Canon 60D and Canon 50mm f/1.8 and shot handheld for the night. Great fun! The film is about the mistakes and trips you don't usually see.",
+            "year": "2016",
+            "credits": "film/after_hours.md"
+        },
         "July": {
             "youtube_id": "Ha-Ydkw88OQ",
             "vimeo_id":"175077450",
@@ -54,6 +62,7 @@
         }
     },
     "images": [
+        "After Hours - A Skateboarding Film",
         "July",
         "Getting started with Magic Lantern",
         "Transit in Sydney",
