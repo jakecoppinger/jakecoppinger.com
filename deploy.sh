@@ -19,13 +19,12 @@ rm -rf ../jakecoppinger.github.io/*
 echo $id "Removing previous build done."
 
 echo $id "Copying new build..."
-cp -r dist/ ../jakecoppinger.github.io/
+cp -r dist/. ../jakecoppinger.github.io/
 echo $id "Copying new build done."
 
 pushd ../jakecoppinger.github.io/
 
 echo $id "Adding and commiting new files to Git..."
-git checkout master
 git add -A
 git commit -m "Automated build and commit @ $(date)"
 echo $id "Adding and commiting new files to Git done."
