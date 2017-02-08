@@ -1,5 +1,6 @@
-[JakeCoppinger.com](http://www.jakecoppinger.com)
-==================
+[jakecoppinger.com](http://www.jakecoppinger.com)
+--------------
+[![David](https://david-dm.org/jakecoppinger/jakecoppinger.com/dev-status.svg)](https://david-dm.org/jakecoppinger/jakecoppinger.com?type=dev)
 
 A portfolio website for my code, mechatronics, film, and design projects. A static site built with [Gulp.js](http://www.gulpjs.com/) for automated Sass, JS and image optimisation (among other cool things), [Nunjucks](https://mozilla.github.io/nunjucks/) for templating and Markdown for body text.
 
