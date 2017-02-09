@@ -1,6 +1,11 @@
 {% macro image(class, path, alt) %}
 
-<img class="{{class}}" srcset="/images/720/{{path}} 720w, /images/1100/{{path}} 1100w, /images/1920/{{path}} 1920w" alt="{{alt}}">
+<picture class="{{class}}">
+   <source srcset="/images/720/{{path}}.webp 720w, /images/1100/{{path}}.webp 1100w, /images/1920/{{path}}.webp 1920w" type="image/webp" alt="{{alt}}">
+   <source srcset="/images/720/{{path}}.jpeg 720w, /images/1100/{{path}}.jpeg 1100w, /images/1920/{{path}}.jpeg 1920w" alt="{{alt}}"> 
+   <img src="/images/1920/{{path}}.jpeg" alt="{{alt}}">
+</picture>
+
 {% endmacro %}
 
 {% macro youtube(id,ultrawidescreen) %}

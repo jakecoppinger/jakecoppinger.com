@@ -1,6 +1,6 @@
 {% extends "base.njk" %} {% block title %}Films{% endblock %} {% block description %}Films by Jake Coppinger.{% endblock %} {% block body %}
 <div class="imagetext">
-    {{ n.image("topbackground","films/montage.jpeg","Traveller using Departing.io") }}
+    {{ n.image("topbackground","films/montage","Traveller using Departing.io") }}
     <section class="header floating difference">
         <h1><a href="/">Jake Coppinger&nbsp;/</a> Films</h1>
     </section>
@@ -32,7 +32,7 @@
 </section>
 <section class="content filmpage">
     <ul class="image-grid">
-        {% for title in images %} {% if title in filmsWithDedicatedPage %} {% set filenameHTML = "/" + title | titleToFilename %} {% else %} {% set filenameHTML = "/film/" + title | titleToFilename %} {% endif %} {% set filenameJPEG = title | titleToFilename + ".jpeg" %} {% set imageURL = "films/" + filenameJPEG %}
+        {% for title in images %} {% if title in filmsWithDedicatedPage %} {% set filenameHTML = "/" + title | titleToFilename %} {% else %} {% set filenameHTML = "/film/" + title | titleToFilename %} {% endif %} {% set filenameJPEG = title | titleToFilename %} {% set imageURL = "films/" + filenameJPEG %}
         <li>
             <a href="{{filenameHTML}}">
                 {{n.image("",imageURL, films[title].description)}}
