@@ -3,16 +3,16 @@
 set -e
 # Any subsequent(*) commands which fail will cause the shell script to exit immediately
 
-id="[Build Script]"
+id="[Deploy Script]"
 
-echo $id "Update build dependencies..."
-npm install
-bower install
-echo $id "Build dependencies updated."
+#echo $id "Update build dependencies..."
+#npm install
+#bower install
+#echo $id "Build dependencies updated."
 
-echo $id "Building..."
-gulp build
-echo $id "Build done."
+#echo $id "Building..."
+#gulp build
+#echo $id "Build done."
 
 echo $id "Removing previous build..."
 rm -rf ../jakecoppinger.github.io/*
@@ -34,4 +34,4 @@ git push -f origin master
 echo $id "Master push done."
 
 echo $id
-echo $id "Build completed!"
+echo $id "Deploy completed!"
