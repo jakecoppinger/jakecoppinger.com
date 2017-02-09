@@ -20,6 +20,9 @@ sudo apt-get -y install npm
 # Install Gulp with npm
 sudo npm install --global gulp-cli
 
+# Install npm-check-updates with npm - helps upgrade dependencies using `ncu`
+sudo npm install --global npm-check-updates
+
 # Install Bower with npm
 sudo npm install -g bower
 
