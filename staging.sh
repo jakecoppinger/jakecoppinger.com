@@ -16,22 +16,21 @@ id="[Staging Script]"
 
 echo $id "Removing previous staged build..."
 rm -rf ../staging_jakecoppinger.com/*
-echo $id "Removing previous staged build done."
 
 echo $id "Copying new build..."
 cp -r dist/. ../staging_jakecoppinger.com/
-echo $id "Copying new build done."
+
+echo $id "Removing CNAME to remove GitHub conflict..."
+rm ../staging_jakecoppinger.com/CNAME
 
 pushd ../staging_jakecoppinger.com/
 
 echo $id "Adding and commiting new files to staging Git..."
 git add -A
 git commit -m "Automated build and commit @ $(date)"
-echo $id "Adding and commiting new files to Git staging git done."
 
 echo $id "Pushing to staging master..."
 git push -f origin master
-echo $id "Master push done."
 
 echo $id
 echo $id "Staging completed!"
