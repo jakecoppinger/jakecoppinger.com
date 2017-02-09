@@ -64,9 +64,10 @@ gulp.task('build', ['clean'], function(callback) {
         callback);
 });
 
-gulp.task('minimal-build', ['clean'], function(callback) {
+// Builds without compiling images
+gulp.task('minbuild', ['clean'], function(callback) {
     runSequence(
-        ['js', 'html', 'sass'], ['concatjs'], ['copy'],
+        ['js', 'html', 'sass'], ['copy'],
         callback);
 });
 
