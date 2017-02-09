@@ -14,9 +14,9 @@ id="[Deploy Script]"
 #gulp build
 #echo $id "Build done."
 
-echo $id "Removing previous build..."
+echo $id "Removing previous deply build..."
 rm -rf ../jakecoppinger.github.io/*
-echo $id "Removing previous build done."
+echo $id "Removing previous deploy build done."
 
 echo $id "Copying new build..."
 cp -r dist/. ../jakecoppinger.github.io/
@@ -24,10 +24,10 @@ echo $id "Copying new build done."
 
 pushd ../jakecoppinger.github.io/
 
-echo $id "Adding and commiting new files to Git..."
+echo $id "Adding and commiting new files to deply Git..."
 git add -A
 git commit -m "Automated build and commit @ $(date)"
-echo $id "Adding and commiting new files to Git done."
+echo $id "Adding and commiting new files to deply Git done."
 
 echo $id "Pushing to master..."
 git push -f origin master
@@ -35,3 +35,4 @@ echo $id "Master push done."
 
 echo $id
 echo $id "Deploy completed!"
+echo $id "View at https://jakecoppinger.com/"
