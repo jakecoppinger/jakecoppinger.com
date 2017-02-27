@@ -88,7 +88,8 @@ gulp.task('copy', function() {
     }).pipe(gulp.dest(build + 'fonts/'));
 
     var images = gulp.src([
-        source + 'images/**/*.*'
+        source + 'original_images/**/*.*'
+//        source + 'images/**/*.*'
     ], {
         dot: true
     }).pipe(gulp.dest(build + 'images/'));
