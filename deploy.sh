@@ -5,16 +5,16 @@ set -e
 
 id="[Deploy Script]"
 
-#echo $id "Update build dependencies..."
-#npm install
-#bower install
-#echo $id "Build dependencies updated."
+echo $id "Update build dependencies..."
+npm install
+bower install
+echo $id "Build dependencies updated."
 
-#echo $id "Building..."
-#gulp build
-#echo $id "Build done."
+echo $id "Building..."
+gulp build
+echo $id "Build done."
 
-echo $id "Removing previous deply build..."
+echo $id "Removing previous deploy build..."
 rm -rf ../jakecoppinger.github.io/*
 echo $id "Removing previous deploy build done."
 
