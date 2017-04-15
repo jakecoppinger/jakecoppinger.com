@@ -32,9 +32,9 @@
 }
 
 #maintitle {
-    mix-blend-mode: difference; //exclusion;
+    //mix-blend-mode: exclusion; //difference; //
     opacity: 1;
-    color: #FFFFFF;
+    color: black; //#FFFFFF;
     font-family: akzidenz-grotesk_pro_regular;
     text-rendering: optimizeLegibility;
     font-smooth: never;
