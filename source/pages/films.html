@@ -31,6 +31,8 @@
     </table>
 </section>
 <section class="content filmpage">
+
+<!--
     <ul class="image-grid">
         {% for title in images %} {% if title in filmsWithDedicatedPage %} {% set filenameHTML = "/" + title | titleToFilename %} {% else %} {% set filenameHTML = "/film/" + title | titleToFilename %} {% endif %} {% set filenameJPEG = title | titleToFilename %} {% set imageURL = "films/" + filenameJPEG %}
         <li>
@@ -42,6 +44,87 @@
                 </a>
         </li>
         {% endfor %}
+        
+
+
     </ul>
+    -->
+
+    <ul id="rig">
+
+
+    {% for title in images %}
+
+    {% if title in filmsWithDedicatedPage %}
+        {% set filenameHTML = "/" + title | titleToFilename %}
+    {% else %}
+        {% set filenameHTML = "/film/" + title | titleToFilename %} 
+    {% endif %} 
+
+        {% set filenameJPEG = title | titleToFilename %} 
+        {% set imageURL = "films/" + filenameJPEG %}
+
+
+
+    <li>
+        <a class="rig-cell" href="#">
+        {{n.image("rig-img",imageURL, films[title].description)}}
+            <!--<img class="rig-img" src="img/1.jpg">-->
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Lorem Ipsum Dolor</span>
+        </a>
+    </li>
+
+        {% endfor %}
+
+
+
+        
+
+
+ <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="/images/720/films/mountains.webp">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Lorem Ipsum Dolor</span>
+        </a>
+    </li>
+
+
+  <li>
+        <a class="rig-cell" href="#">
+            <!--<img class="rig-img" src="img/1.jpg"> -->
+
+           
+                <!--<source srcset="/images/720/films/mountains.webp 720w, /images/1100/films/mountains.webp 1100w, /images/1920/films/mountains.webp 1920w" type="image/webp" alt="">-->
+
+                <img class="rig-img" srcset="/images/720/films/mountains.jpeg 720w, /images/1100/films/mountains.jpeg 1100w, /images/1920/films/mountains.jpeg 1920w" alt="">
+
+                <!--<img src="/images/1920/films/mountains.jpeg" alt="">-->
+
+
+
+
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Lorem Ipsum Dolor</span>
+        </a>
+    </li>
+
+
+
+
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/1.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Lorem Ipsum Dolor</span>
+        </a>
+    </li>
+
+
+
+</ul>
+
+
 </section>
 {% endblock %}
