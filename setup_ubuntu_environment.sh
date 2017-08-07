@@ -6,7 +6,7 @@
 set -e
 
 sudo apt-get update
-sudo apt-get -y  upgrade
+sudo apt-get -y upgrade
 
 # Install node
 sudo apt-get -y install nodejs
@@ -21,7 +21,9 @@ sudo apt-get -y install npm
 sudo npm install --global gulp-cli
 
 # Install npm-check-updates with npm - helps upgrade dependencies using `ncu`
-sudo npm install --global npm-check-updates
+# If this fails with "enoent ENOENT: no such file or directory:" (unknown npm bug), try
+# sudo rm -rf /usr/local/lib/node_modules/npm-check-updates
+# sudo npm install --global npm-check-updates
 
 # Install Bower with npm
 sudo npm install -g bower
