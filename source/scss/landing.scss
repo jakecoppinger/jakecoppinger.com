@@ -34,7 +34,7 @@
 #maintitle {
     mix-blend-mode: luminosity;
     color: black;
-    font-family: akzidenz-grotesk_pro_regular;
+    font-family: -apple-system, BlinkMacSystemFont, "akzidenz-grotesk_pro_regular", sans-serif;
     text-rendering: optimizeLegibility;
     font-smooth: never;
     text-align: center;
@@ -52,7 +52,7 @@
         font-size: calc(1.5em + (5vw * 0.5));
     }
     h3 {
-        font-family: akzidenz-grotesk_pro_medium;
+        font-family: -apple-system, BlinkMacSystemFont, "akzidenz-grotesk_pro_regular", sans-serif;
         font-weight: 400;
         text-align: center;
         margin: 0 auto;
@@ -92,7 +92,7 @@
         &.title {
             //font-size: 70%;
             opacity: 0.2;
-            font-family: akzidenz-grotesk_pro_medium;
+            font-family: -apple-system, BlinkMacSystemFont, "akzidenz-grotesk_pro_regular", sans-serif;
         }
     }
 }
