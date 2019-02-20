@@ -22,10 +22,17 @@ p, h1, h2, h3, li {
     font-weight: 500;
 }
 
-h1 {
+#maintitle h1 {
     font-size: 3em;
     line-height: 1;
     letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    
 }
 
 h2 {
