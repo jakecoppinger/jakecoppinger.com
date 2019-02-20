@@ -1,29 +1,14 @@
-# System metadata
+# metadata / temp
 .DS_Store
-
-# Folders that are compiled
-dist/
-node_modules/
+__pycache__/
 .tmp/
 
-
-source/film
-source/pages/film/
-source/pages/film/dummy.json
-
-
-# Ignore bower components 
-source/js/components
-
-# Ignore compressed images
-source/images
+# Folders that are compiled
+build/
 
 # Ignore compiled CSS
-source/css/
+static/css/
 
-# Ignore compiled HTML
-source/*.html
-!source/*.tpl.html
+# Old code
+old/
 
-# Ignore compiled JS
-*.min.js

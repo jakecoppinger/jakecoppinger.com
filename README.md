@@ -1,64 +1,10 @@
 [jakecoppinger.com](http://www.jakecoppinger.com)
 --------------
-[![David](https://david-dm.org/jakecoppinger/jakecoppinger.com/dev-status.svg)](https://david-dm.org/jakecoppinger/jakecoppinger.com?type=dev)
 
-A portfolio website for my code, mechatronics, film, and design projects. A static site built with [Gulp.js](http://www.gulpjs.com/) for automated Sass, JS and image optimisation (among other cool things), [Nunjucks](https://mozilla.github.io/nunjucks/) for templating and Markdown for body text.
+My portfolio site.
 
-# Setting up development environment
+Under (re)construction - again!
 
-Make sure Node and NPM are installed
+Built using a simple statically compiled Flask site this time. My last rewrite a few years ago was a custom templating engine which required more maintainance than I would have liked.
 
-`sudo apt-get update`
-
-`sudo apt-get install nodejs`
-
-`sudo apt-get install npm`
-
-Install dependencies with NPM. This will take a while depending on your internet connection.
-
-`npm install`
-
-### Install bower
-
-Make sure bower is installed
-
-`sudo npm install -g bower`
-
-You may need to install legacy node for Bower to work:
-
-`sudo apt-get install nodejs-legacy`
-
-Install Bower dependencies
-
-`bower install`
-
-### Install gulp
-
-`sudo npm install --global gulp-cli`
-
-## Ububtu
-
-`sudo apt-get install imagemagick graphicsmagick`
-
-## Mac OS X (using Homebrew):
-
-`brew install imagemagick`
-
-`brew install graphicsmagick`
-
-## Development
-
-Images are optimised separately to the main development server to optimise speed.
-
-`gulp images`
-
-Spin up [Browsersync.io](https://www.browsersync.io) and compile all the things.
-
-`gulp serve`
-
-## Building
-
-`gulp build`
-
-# Author
-Design and development by [Jake Coppinger](http://www.jakecoppinger.com), 2016.
+Instructions for running to come.
