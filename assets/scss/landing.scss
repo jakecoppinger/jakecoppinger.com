@@ -1,9 +1,9 @@
 #landingscreen {
     height: 100vh;
-    margin-top:10vh;
-    width:50vw;
+    margin-top:5vh;
+    width:60vw;
     margin-left: 10vw;
-    margin-right: 40vw;
+    margin-right: 30vw;
 }
 
 
@@ -20,6 +20,10 @@
 p, h1, h2, h3, li {
     font-family: -apple-system, BlinkMacSystemFont, "akzidenz-grotesk_pro_regular", sans-serif;
     font-weight: 500;
+}
+
+li {
+    margin-bottom: 0.8em;
 }
 
 #maintitle h1 {
